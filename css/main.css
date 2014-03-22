@@ -1,5 +1,5 @@
 body {
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'EB Garamond', sans-serif;
 	font-size: 18pt;
 	line-height: 1.5;
 	/*width: 700px;*/
@@ -17,11 +17,12 @@ div, article {
 	letter-spacing: 1px;
 }
 
+
 .title {
 	width: 750px;
 	margin-left: 150px;
 	font-size: 48px;
-	font-family: 'Philosopher', sans-serif;
+	font-family: 'EB Garamond', sans-serif;
 }
 
 .menu {

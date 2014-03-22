@@ -1,10 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Школьный кубок княгини Ольги</title>
-  </head>
-  <body>
-    <p>Example paragraph</p>
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" href="./css/main.css">
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Philosopher&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+    	<header>
+        <div class="title">
+            Школьный кубок княгини Ольги<br>
+            5–6 апреля 2014 года
+        </div>
+        <div class="menu">
+            <ul>
+        		<a href="/schedule.html"><li>Расписание</a>
+                <li><a href="/map.html">Карта</a>
+                <li><a href="/editors.html">Редакторы</a>
+                <li><a href="/brain.html">Схема <span class="caps">БР</span></a>
+                <li><a href="/quartet.html">Схема <span class="caps">ЭК</span></a>
+                <li><a href="/registration.html">Регистрация</a>
+                <li><a href="/list.html">Заявки</a>
+            </ul>
+        </div>
+    	</header>
+        
+        <article>
+            {{ page.content }}<br>
+            Текст, другой текст — разный текст ширина текста. Запят
+            <br><br>
+            Текст, другой текст — разный asdfadf we[rhsj [wrjwe ]]
+            <br>
+            <br>
+            <br>
+            sp[0toerh awsepf фыва89гцйрф ]аывр ыфвк
+        </article>
+
+    <script src="./js/instantclick.js" data-no-instant></script>
+	<script data-no-instant>InstantClick.init();</script>	
+    </body>
 </html>

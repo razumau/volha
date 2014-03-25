@@ -11,16 +11,27 @@ h3 {
 }
 
 .title, .main, .nav {
-	background-color: white;
+	background-color: #f0f0f0;
+	color: #101010;
+}
+
+.figure {
+	font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+table, tr, td {
+	border: none;
 }
 
 .title {
-	background-color: #BF0510 !important;
+	background-color: #960018 !important;
 	color: white;
 	font-size: 36px;
 	font-family: 'PT Sans', sans-serif;
 	text-align: center;
-	line-height: 1.8;	
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
+	line-height: 1;
 }
 
 .nav {

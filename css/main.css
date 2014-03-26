@@ -15,6 +15,17 @@ h3 {
 	color: #101010;
 }
 
+@media only screen and (min-width: 991px) {
+	.main {
+		min-height: 700px;
+	}
+}
+
+.nav li a {
+	padding-left: 10%;
+}
+
+
 .figure {
 	font-family: 'Alegreya Sans SC', sans-serif;
 }

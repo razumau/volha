@@ -10,7 +10,7 @@ h3 {
 	padding-bottom: 2px;
 }
 
-.title, .main, .nav {
+.main, .nav {
 	background-color: #f0f0f0;
 	color: #101010;
 }
@@ -19,8 +19,8 @@ h3 {
 	font-family: 'Alegreya Sans SC', sans-serif;
 }
 
-table, tr, td {
-	border: none;
+table {
+	margin-left: 1em;
 }
 
 .title {
@@ -41,11 +41,35 @@ table, tr, td {
 .main {
 	padding-top: 1%;
 	padding-left: 2%;
+	padding-bottom: 2%;
 	border-left: 1px dotted blue;
 }
 
 ul.nav {
 	padding-right: 0px;
+}
+
+ul.editors {
+	list-style:none;
+}
+
+ul.editors li:before {
+	content:"—"; 
+	position:relative; 
+
+}
+
+ul.editors li {
+	text-indent: -0.7em; 
+}
+
+.teams {
+	font-size: 14px;
+	width: 95%;
+}
+
+table.teams th {
+	text-align: center;
 }
 
 .row {

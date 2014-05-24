@@ -64,6 +64,12 @@ table {
 
 }
 
+.teams {
+	margin-left: 0 !important;
+	font-size: 20px !important;
+	width: 100% !important;
+}
+
 td {
 	height : 70px;
 	border-top: none !important;
@@ -98,7 +104,7 @@ ul.nav {
 
 ul.dash {
 	list-style:none;
-	margin-left: 0.5em;
+	margin-left: 1em;
 
 }
 
@@ -108,7 +114,7 @@ ul.dash li:before {
 }
 
 ul.dash li {
-	text-indent: -1.5em; 
+	text-indent: -2em; 
 }
 
 .teams {

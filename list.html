@@ -70,11 +70,11 @@
 
     function init() {
         Tabletop.init( { key: public_spreadsheet_url,
-                         callback: checkData,
+                         callback: createTable,
                          simpleSheet: true } )
     }
 
-    function checkData(data, tabletop) {
+/*    function checkData(data, tabletop) {
         console.log(data);
         if (data.length === 0) {
             init();
@@ -83,8 +83,8 @@
             createTable(data);
         }
     }
-
-    function createTable (data) {
+*/
+    function createTable (data, tabletop) {
         console.log(data);
         var table = [],
             i = 0;

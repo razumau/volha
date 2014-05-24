@@ -9,6 +9,7 @@ h3 {
 	font-size: 20px;
 	font-weight: 700;
 	margin-top: 10px;
+	margin-left: 10px;
 	padding-bottom: 8px;
 }
 
@@ -19,6 +20,20 @@ h3 {
 .main, .nav {
 	background-color: #f0f0f0;
 	color: #101010;
+}
+
+.nav-pills > li > a {
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+}
+
+.nav-pills > li {
+	border-right: 1px dotted blue;
+}
+
+.nav-pills > li.active {
+	border-right: 0 !important;
 }
 
 @media only screen and (min-width: 991px) {
@@ -70,15 +85,11 @@ p.desc {
 	line-height: 0.8;
 }
 
-.nav {
-	padding-top: 1px;
-}
-
 .main {
 	padding-top: 1.2%;
 	padding-left: 1%;
 	padding-bottom: 2%;
-	border-left: 1px dotted blue;
+	
 }
 
 ul.nav {
@@ -124,3 +135,13 @@ header ul {
 	padding: 0;
 	margin: 0;
 }
+
+iframe {
+	border: 0;
+	margin: 0 auto;
+	width: 90%;
+	height: 450px;
+	display: block;
+}
+
+

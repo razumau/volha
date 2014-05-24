@@ -23,9 +23,9 @@ h3 {
 }
 
 .nav-pills > li > a {
--webkit-border-radius: 0;
--moz-border-radius: 0;
-border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
 }
 
 .nav-pills > li {
@@ -58,21 +58,27 @@ border-radius: 0;
 	width: 70px !important;
 }
 
-table {
+.program {
 	margin-left: 1em;
 	width: 90% !important;
-
 }
 
 .teams {
-	margin-left: 0 !important;
 	font-size: 20px !important;
 	width: 100% !important;
 }
 
-td {
+.program td {
 	height : 70px;
 	border-top: none !important;
+}
+
+.teams td, .teams th {
+	border-top: none !important;
+}
+
+.teams tr:nth-child(3n+2) td {
+	border-top: 1px solid #bbb !important;
 }
 
 p.desc {
@@ -84,7 +90,6 @@ p.desc {
 	background-color: #960018 !important;
 	color: white;
 	font-size: 36px;
-	font-family: 'PT Sans', sans-serif;
 	text-align: center;
 	padding-top: 0.7em;
 	padding-bottom: 0.7em;
@@ -122,17 +127,16 @@ ul.dash li {
 	width: 95%;
 }
 
+.teams .figure {
+	font-size: 22px;
+}
 
 .row {
 	background-color: #aaaaaa;
 }
 
-div, article {
-	/*border: 1px solid;*/
-}
-
 .caps {
-	letter-spacing: 2px;
+	letter-spacing: 1.8px;
 	font-size: 26px;
 	font-variant: small-caps;
 }

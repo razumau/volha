@@ -7,7 +7,7 @@
     <title>Кубок княгини Ольги</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/PT+Sans:400,700,400i:f">
+    <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/PT+Sans:400,700,400i">
     <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Alegreya+Sans:400,700,400i">
     <script type="text/javascript">
 
@@ -32,7 +32,7 @@
     <div class="row">
         <ul class="col-md-2 col-md-offset-3 nav nav-pills nav-stacked">
             <li>
-                <a href="#">расписание</a>
+                <a href="./index.html">расписание</a>
             <li>
                 <a href="./map.html">карта</a>
                 <li>   
@@ -50,7 +50,7 @@
                     <th>#</th>
                     <th>команда</th>
                     <th>город</th>
-                    <th>место</th>
+                    <th title='в рейтинге МАК'>место</th>
                 </tr>
             </table>
 
@@ -89,13 +89,13 @@
         var table = [],
             i = 0;
         data.forEach (function (v, index){
-                table [i++] = '<tr><td>';
+                table [i++] = '<tr><td class="figure">';
                 table [i++] = (index + 1).toString();
                 table [i++] = '</td><td>';
                 table [i++] = v['команда'];
                 table [i++] = '</td><td>';
                 table [i++] = v['город'];
-                table [i++] = '</td><td>';
+                table [i++] = '</td><td class="figure">';
                 table [i++] = v['место'];
                 table [i++] = '</td></tr>';
 

@@ -127,7 +127,7 @@ div, article {
 
 .caps {
 	letter-spacing: 2px;
-	font-size: larger;
+	font-size: 26px;
 	font-variant: small-caps;
 }
 
@@ -138,10 +138,13 @@ header ul {
 
 iframe {
 	border: 0;
-	margin: 0 auto;
+	margin: 15px auto;
 	width: 90%;
 	height: 450px;
 	display: block;
 }
 
-
+img {
+	margin-left: 10%;
+	width: 80%;
+}

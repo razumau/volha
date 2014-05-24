@@ -32,11 +32,31 @@ h3 {
 
 
 .figure {
-	font-family: 'Alegreya Sans SC', sans-serif;
+	font-family: 'Alegreya Sans', sans-serif;
+}
+
+.time {
+	font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 700;
+	text-align: left;
 }
 
 table {
 	margin-left: 1em;
+	width: 90% !important;
+}
+
+td {
+	height : 70px;
+	border-top: none !important;
+
+}
+
+
+
+p.desc {
+	font-style: italic;
+	font-size: 85%;
 }
 
 .title {
@@ -47,7 +67,7 @@ table {
 	text-align: center;
 	padding-top: 0.7em;
 	padding-bottom: 0.7em;
-	line-height: 1;
+	line-height: 0.8;
 }
 
 .nav {
@@ -95,7 +115,9 @@ div, article {
 }
 
 .caps {
-	letter-spacing: 1px;
+	letter-spacing: 2px;
+	font-size: larger;
+	font-variant: small-caps;
 }
 
 header ul {

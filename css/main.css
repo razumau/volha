@@ -72,6 +72,14 @@ h3 {
 	width: 100% !important;
 }
 
+#waitHeader, #vitHeader {
+	visibility: hidden;
+}
+
+#waitTable, #vitTable {
+	visibility: hidden;
+}
+
 .program td {
 	height : 70px;
 	border-top: none !important;

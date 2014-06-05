@@ -45,7 +45,7 @@
                 <a href="./list.html" data-no-instant>команды</a>
         </ul>
         <div class="col-md-6 main">
-            <table class='table teams'>
+            <table class='table teams' id='mainTable'>
                 <tr>
                     <th>#</th>
                     <th>команда</th>
@@ -53,7 +53,26 @@
                     <th title='в рейтинге МАК'>место</th>
                 </tr>
             </table>
-
+            <br/>
+            <h3 id='waitHeader'>Список ожидания</h3>
+            <table class='table teams' id='waitTable'>
+                <tr>
+                    <th>#</th>
+                    <th>команда</th>
+                    <th>город</th>
+                    <th title='в рейтинге МАК'>место</th>
+                </tr>
+            </table>
+            <br/>
+            <h3 id='vitHeader'>Витебские команды</h3>
+            <table class='table teams' id='vitTable'>
+                <tr>
+                    <th>#</th>
+                    <th>команда</th>
+                    <th>город</th>
+                    <th title='в рейтинге МАК'>место</th>
+                </tr>
+            </table>
     </div> 
 </div>
 </div>      
@@ -66,7 +85,7 @@
 <script type="text/javascript">
 
     var spinner = new Spinner().spin();
-    $('table').append(spinner.el);
+    $('#mainTable').append(spinner.el);
 
     window.onload =  function() { init() };
 
@@ -79,23 +98,46 @@
                          simpleSheet: true } )
     }
 
-    function createTable (data, tabletop) {
-        var table = [],
-            i = 0;
-        data.forEach (function (v, index){
-                table [i++] = '<tr><td class="figure">';
-                table [i++] = (index + 1).toString();
-                table [i++] = '</td><td>';
-                table [i++] = v['команда'];
-                table [i++] = '</td><td>';
-                table [i++] = v['город'];
-                table [i++] = '</td><td class="figure">';
-                table [i++] = v['место'];
-                table [i++] = '</td></tr>';
+    function addToTable (table, v, number) {
 
-            });
+        table.push('<tr><td class="figure">');
+        table.push((number).toString());
+        table.push('</td><td>');
+        table.push(v['команда']);
+        table.push('</td><td>');
+        table.push(v['город']);
+        table.push('</td><td class="figure">');
+        table.push(v['место']);
+        table.push('</td></tr>');
+    }
+
+    function createTable (data, tabletop) {
+        var mainTable = [], 
+            vitTable = [],
+            waitTable = [],
+            mainCount = 1, vitCount = 1, waitCount = 1,
+            vit = ['Гремлины', 'Дельтаплан', 'Нелюди в белом', 'Ход конём', 'Пчёлы Севера'];
+
+        data.forEach (function (v, index){                
+
+                if (vit.indexOf(v['команда']) > -1) {
+                    addToTable(vitTable, v, vitCount++);
+                } else {
+                    if (mainCount <= 50)
+                        addToTable(mainTable, v, mainCount++);
+                    else 
+                        addToTable(waitTable, v, waitCount++);
+                }
+
+        });
+        
+        $('#vitHeader').css("visibility", "visible");
+        $('#waitHeader').css("visibility", "visible");
+        $('table').css("visibility", "visible");
+        $('#mainTable').append(mainTable.join(''));
+        $('#waitTable').append(waitTable.join(''));
+        $('#vitTable').append(vitTable.join(''));
         spinner.stop();
-        $('table').append(table.join(''));
     }
 
 </script>

@@ -80,6 +80,10 @@ h3 {
 	visibility: hidden;
 }
 
+#vitTable td:nth-child(1) {
+	width: 45px !important;
+}
+
 .program td {
 	height : 70px;
 	border-top: none !important;
@@ -91,6 +95,10 @@ h3 {
 
 .teams tr:nth-child(3n+2) td {
 	border-top: 1px solid #bbb !important;
+}
+
+#vitTable tr:nth-child(5) td {
+	border-top: none !important;
 }
 
 p.desc {

@@ -54,18 +54,16 @@
                 </tr>
             </table>
             <br/>
-            <h3 id='waitHeader'>Список ожидания</h3>
-            <table class='table teams' id='waitTable'>
+            <h3 id='vitHeader'>Витебские команды</h3>
+            <table class='table teams' id='vitTable'>
                 <tr>
                     <th>#</th>
                     <th>команда</th>
-                    <th>город</th>
-                    <th title='в рейтинге МАК'>место</th>
                 </tr>
             </table>
             <br/>
-            <h3 id='vitHeader'>Витебские команды</h3>
-            <table class='table teams' id='vitTable'>
+            <h3 id='waitHeader'>Список ожидания</h3>
+            <table class='table teams' id='waitTable'>
                 <tr>
                     <th>#</th>
                     <th>команда</th>
@@ -98,17 +96,27 @@
                          simpleSheet: true } )
     }
 
-    function addToTable (table, v, number) {
+    function addToTable (table, v, number, isVit) {
 
         table.push('<tr><td class="figure">');
-        table.push((number).toString());
+        if (isVit) {
+            table.push((number + 50).toString());
+        } else {
+            table.push((number).toString());
+        }
         table.push('</td><td>');
         table.push(v['команда']);
-        table.push('</td><td>');
-        table.push(v['город']);
-        table.push('</td><td class="figure">');
-        table.push(v['место']);
-        table.push('</td></tr>');
+        table.push('</td>');
+
+        if (!isVit) {
+            table.push('<td>');
+            table.push(v['город']);
+            table.push('</td><td class="figure">');
+            table.push(v['место']);
+            table.push('</td>');
+        }
+
+        table.push('</tr>');
     }
 
     function createTable (data, tabletop) {
@@ -121,12 +129,12 @@
         data.forEach (function (v, index){                
 
                 if (vit.indexOf(v['команда']) > -1) {
-                    addToTable(vitTable, v, vitCount++);
+                    addToTable(vitTable, v, vitCount++, true);
                 } else {
                     if (mainCount <= 50)
-                        addToTable(mainTable, v, mainCount++);
+                        addToTable(mainTable, v, mainCount++, false);
                     else 
-                        addToTable(waitTable, v, waitCount++);
+                        addToTable(waitTable, v, waitCount++, false);
                 }
 
         });

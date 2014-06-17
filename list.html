@@ -98,6 +98,7 @@
 
     function addToTable (table, v, number, isVit) {
 
+        var confirmed = v['подтверждение'];
         table.push('<tr><td class="figure">');
         if (isVit) {
             table.push((number + 50).toString());
@@ -105,7 +106,11 @@
             table.push((number).toString());
         }
         table.push('</td><td>');
+        if (confirmed)
+            table.push('<b>')
         table.push(v['команда']);
+        if (confirmed)
+            table.push('<b>')
         table.push('</td>');
 
         if (!isVit) {

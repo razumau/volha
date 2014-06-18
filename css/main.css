@@ -72,15 +72,15 @@ h3 {
 	width: 100% !important;
 }
 
-#waitHeader, #vitHeader {
+#waitHeader, #vitHeader, #wcHeader{
 	visibility: hidden;
 }
 
-#waitTable, #vitTable {
+#waitTable, #vitTable, #wcTable {
 	visibility: hidden;
 }
 
-#vitTable td:nth-child(1) {
+#vitTable td:nth-child(1), #wcTable td:nth-child(1) {
 	width: 45px !important;
 }
 

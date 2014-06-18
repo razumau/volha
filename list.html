@@ -62,6 +62,14 @@
                 </tr>
             </table>
             <br/>
+            <h3 id='wcHeader'>Вайлд-кард</h3>
+            <table class='table teams' id='wcTable'>
+                <tr>
+                    <th>#</th>
+                    <th>команда</th>
+                </tr>
+            </table>
+            <br/>
             <h3 id='waitHeader'>Список ожидания</h3>
             <table class='table teams' id='waitTable'>
                 <tr>
@@ -139,14 +147,18 @@
     function createTable (data, tabletop) {
         var mainTable = [], 
             vitTable = [],
+            wcTable = [],
             waitTable = [],
             mainCount = 1, vitCount = 1, waitCount = 1,
-            vit = ['Гремлины', 'Дельтаплан', 'Нелюди в белом', 'Ход конём', 'Пчёлы Севера'];
+            vit = ['Гремлины', 'Дельтаплан', 'Нелюди в белом', 'Ход конём', 'Пчёлы Севера'],
+            wc = ['Keiseker'];
 
         data.forEach (function (v, index){                
 
                 if (vit.indexOf(v['команда']) > -1) {
                     addToTable(vitTable, v, vitCount++, true);
+                } else if (wc.indexOf(v['команда']) > -1) {
+                    addToTable(wcTable, v, vitCount++, true);
                 } else {
                     if (mainCount <= 50)
                         addToTable(mainTable, v, mainCount++, false);
@@ -158,10 +170,12 @@
         
         $('#vitHeader').css("visibility", "visible");
         $('#waitHeader').css("visibility", "visible");
+        $('#wcHeader').css("visibility", "visible");
         $('table').css("visibility", "visible");
         $('#mainTable').append(mainTable.join(''));
         $('#waitTable').append(waitTable.join(''));
         $('#vitTable').append(vitTable.join(''));
+        $('#wcTable').append(wcTable.join(''));
         spinner.stop();
     }
 

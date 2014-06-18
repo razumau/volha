@@ -108,36 +108,36 @@
 
         var confirmed = v['подтверждение'];
         table.push('<tr><td class="figure">');
-        if (confirmed)
-            table.push('<b>');
+        if (!confirmed)
+            table.push('<i>');
         if (isVit) {
             table.push((number + 50).toString());
         } else {
             table.push((number).toString());
         }
-        if (confirmed)
-            table.push('<b>');
+        if (!confirmed)
+            table.push('</i>');
         table.push('</td><td>');
-        if (confirmed)
-            table.push('<b>');
+        if (!confirmed)
+            table.push('<i>');
         table.push(v['команда']);
-        if (confirmed)
-            table.push('<b>');
+        if (!confirmed)
+            table.push('</i>');
         table.push('</td>');
 
         if (!isVit) {
             table.push('<td>');
-            if (confirmed)
-            table.push('<b>');
+            if (!confirmed)
+                table.push('<i>');
             table.push(v['город']);
-            if (confirmed)
-            table.push('<b>');
+            if (!confirmed)
+                table.push('</i>');
             table.push('</td><td class="figure">');
-            if (confirmed)
-            table.push('<b>');
+            if (!confirmed)
+                table.push('<i>');
             table.push(v['место']);
             if (confirmed)
-            table.push('<b>');
+                table.push('</i>');
             table.push('</td>');
         }
 

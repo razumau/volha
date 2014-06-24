@@ -130,7 +130,6 @@ ul.nav {
 ul.dash {
 	list-style:none;
 	margin-left: 1em;
-
 }
 
 ul.dash li:before {
@@ -138,8 +137,27 @@ ul.dash li:before {
 	position:relative; 
 }
 
-ul.dash li {
+ul.dash li{
 	text-indent: -2em; 
+}
+
+ol {
+	font-family: 'Alegreya Sans', sans-serif;
+}
+
+ol li p {
+	font-family: 'PT Sans', sans-serif;
+	padding-left: 1em;
+	text-indent: -1em;
+	padding-top: 0.25em;
+}
+
+h3.regulations {
+	padding-top: 1.5em;
+}
+
+.formula {
+	text-align: center;
 }
 
 .teams {

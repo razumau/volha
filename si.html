@@ -55,36 +55,12 @@
                 <tr>
                     <th>#</th>
                     <th>команда</th>
-                    <th>город</th>
-                    <th title='в рейтинге МАК'>место</th>
+                    <th>сумма</th>
+                    <th>ответов за <span class='figure'>50</span></th>
                 </tr>
             </table>
-            <br/>
-            <h3 id='vitHeader'>Витебские команды</h3>
-            <table class='table teams' id='vitTable'>
-                <tr>
-                    <th>#</th>
-                    <th>команда</th>
-                </tr>
-            </table>
-            <br/>
-            <h3 id='wcHeader'>Вайлд-кард</h3>
-            <table class='table teams' id='wcTable'>
-                <tr>
-                    <th>#</th>
-                    <th>команда</th>
-                </tr>
-            </table>
-            <br/>
-            <h3 id='waitHeader'>Список ожидания</h3>
-            <table class='table teams' id='waitTable'>
-                <tr>
-                    <th>#</th>
-                    <th>команда</th>
-                    <th>город</th>
-                    <th title='в рейтинге МАК'>место</th>
-                </tr>
-            </table>
+            
+            
     </div> 
 </div>
 </div>      
@@ -111,77 +87,39 @@
                          simpleSheet: true } )
     }
 
-    function addToTable (table, v, number, isVit) {
+    function addToTable (table, v, number) {
 
-        var confirmed = v['подтверждение'];
         table.push('<tr><td class="figure">');
-        if (!confirmed)
-            table.push('<i>');
-        if (isVit) {
-            table.push((number + 50).toString());
-        } else {
-            table.push((number).toString());
-        }
-        if (!confirmed)
-            table.push('</i>');
+        table.push((number).toString());
         table.push('</td><td>');
-        if (!confirmed)
-            table.push('<i>');
         table.push(v['команда']);
-        if (!confirmed)
-            table.push('</i>');
+        table.push('</td><td class="figure">');
+        table.push(v['сумма']);
+        table.push('</td><td class="figure">');
+        table.push(v['ответы за 50']);
         table.push('</td>');
-
-        if (!isVit) {
-            table.push('<td>');
-            if (!confirmed)
-                table.push('<i>');
-            table.push(v['город']);
-            if (!confirmed)
-                table.push('</i>');
-            table.push('</td><td class="figure">');
-            if (!confirmed)
-                table.push('<i>');
-            table.push(v['место']);
-            if (confirmed)
-                table.push('</i>');
-            table.push('</td>');
-        }
-
         table.push('</tr>');
     }
 
     function createTable (data, tabletop) {
         var mainTable = [], 
-            vitTable = [],
-            wcTable = [],
-            waitTable = [],
-            mainCount = 1, vitCount = 1, waitCount = 1,
+            mainCount = 1;
             
+        data.sort(function (a, b) {
+           var result = a['сумма'] - b['сумма'];
+           if (result === 0){
+               return a['ответы за 50'] - b['ответы за 50'];
+           } else {
+               return result;
+           }
+        });
 
         data.forEach (function (v, index){                
-
-                if (vit.indexOf(v['команда']) > -1) {
-                    addToTable(vitTable, v, vitCount++, true);
-                } else if (wc.indexOf(v['команда']) > -1) {
-                    addToTable(wcTable, v, vitCount++, true);
-                } else {
-                    if (mainCount <= 50)
-                        addToTable(mainTable, v, mainCount++, false);
-                    else 
-                        addToTable(waitTable, v, waitCount++, false);
-                }
-
+            addToTable(mainTable, v, mainCount);
         });
         
-        $('#vitHeader').css("visibility", "visible");
-        $('#waitHeader').css("visibility", "visible");
-        $('#wcHeader').css("visibility", "visible");
         $('table').css("visibility", "visible");
         $('#mainTable').append(mainTable.join(''));
-        $('#waitTable').append(waitTable.join(''));
-        $('#vitTable').append(vitTable.join(''));
-        $('#wcTable').append(wcTable.join(''));
         spinner.stop();
     }
 

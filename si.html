@@ -108,7 +108,7 @@
         data.sort(function (a, b) {
            var result = a['сумма'] - b['сумма'];
            if (result === 0){
-               return a['50'] - b['50'];
+               return b['50'] - a['50'];
            } else {
                return result;
            }

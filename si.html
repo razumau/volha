@@ -56,7 +56,7 @@
                     <th>#</th>
                     <th>команда</th>
                     <th>сумма</th>
-                    <th>за <span class='figure'>50</span></th>
+                    <th>за&nbsp;<span class='figure'>50</span></th>
                 </tr>
             </table>
             
@@ -106,7 +106,7 @@
             mainCount = 1;
             
         data.sort(function (a, b) {
-           var result = a['сумма'] - b['сумма'];
+           var result = b['сумма'] - a['сумма'];
            if (result === 0){
                return b['50'] - a['50'];
            } else {

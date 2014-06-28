@@ -91,7 +91,7 @@
     }
 
     function addToTable (table, v, number) {
-
+        console.log(v['Тур 1']);
         table.push('<tr><td class="figure">');
         table.push((number).toString());
         table.push('</td><td>');
@@ -117,11 +117,11 @@
             mainCount = 1;
             
         data.sort(function (a, b) {
-           return a['сумма'] - b['сумма'];
+           return b['сумма'] - a['сумма'];
         });
 
         data.forEach (function (v, index){                
-            addToTable(mainTable, v, mainCount);
+            addToTable(mainTable, v, mainCount++);
         });
         
         $('table').css("visibility", "visible");

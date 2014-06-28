@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Кубок княгини Ольги</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/PT+Sans:400,700,400i">
+    <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Alegreya+Sans:400,700,400i">
+    <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-43833229-2']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-3 title">
+            кубок княгини Ольги</div>
+    </div>
+    <div class="row">
+        <ul class="col-md-2 col-md-offset-3 nav nav-pills nav-stacked">
+            <li>
+                <a href="./index.html">расписание</a>
+            <li>
+                <a href="./map.html">карта</a>
+            <li>
+                <a href="./chgk.html" data-no-instant>результаты <span class='caps'>чгк</span></a>
+            <li>
+                <a href="./si.html" data-no-instant>результаты <span class='caps'>си</span></a>
+            <li class='active'>
+                <a href="./si.html" data-no-instant>результаты <span class='caps'>эк</span></a>
+            <li>    
+                <a href="./regulations.html">регламент</a>
+            <li>
+                <a href="./editors.html">редакторы</a>
+            <li>   
+                <a href="./hotels.html" data-no-instant>гостиницы</a>
+            <li>
+                <a href="./list.html" data-no-instant>команды</a>
+        </ul>
+        <div class="col-md-6 main">
+            <table class='table teams' id='mainTable'>
+                <tr>
+                    <th>#</th>
+                    <th>команда</th>
+                    <th>город</th>
+                    <th title='в рейтинге МАК'>место</th>
+                </tr>
+            </table>
+            <br/>
+            <h3 id='vitHeader'>Витебские команды</h3>
+            <table class='table teams' id='vitTable'>
+                <tr>
+                    <th>#</th>
+                    <th>команда</th>
+                </tr>
+            </table>
+            <br/>
+            <h3 id='wcHeader'>Вайлд-кард</h3>
+            <table class='table teams' id='wcTable'>
+                <tr>
+                    <th>#</th>
+                    <th>команда</th>
+                </tr>
+            </table>
+            <br/>
+            <h3 id='waitHeader'>Список ожидания</h3>
+            <table class='table teams' id='waitTable'>
+                <tr>
+                    <th>#</th>
+                    <th>команда</th>
+                    <th>город</th>
+                    <th title='в рейтинге МАК'>место</th>
+                </tr>
+            </table>
+    </div> 
+</div>
+</div>      
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src='./js/tabletop.js'></script>
+<script src='./js/spin.min.js'></script>
+<script src="./js/instantclick.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init();</script>
+<script type="text/javascript">
+
+    var spinner = new Spinner().spin();
+    $('#mainTable').append(spinner.el);
+
+    window.onload =  function() { init() };
+
+
+    var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=17ENIPklpTG9Fbzg8DSWgjpfCiLz8pbuOxYFbDlrJQcU&output=html';
+
+    function init() {
+
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: createTable,
+                         simpleSheet: true } )
+    }
+
+    function addToTable (table, v, number, isVit) {
+
+        var confirmed = v['подтверждение'];
+        table.push('<tr><td class="figure">');
+        if (!confirmed)
+            table.push('<i>');
+        if (isVit) {
+            table.push((number + 50).toString());
+        } else {
+            table.push((number).toString());
+        }
+        if (!confirmed)
+            table.push('</i>');
+        table.push('</td><td>');
+        if (!confirmed)
+            table.push('<i>');
+        table.push(v['команда']);
+        if (!confirmed)
+            table.push('</i>');
+        table.push('</td>');
+
+        if (!isVit) {
+            table.push('<td>');
+            if (!confirmed)
+                table.push('<i>');
+            table.push(v['город']);
+            if (!confirmed)
+                table.push('</i>');
+            table.push('</td><td class="figure">');
+            if (!confirmed)
+                table.push('<i>');
+            table.push(v['место']);
+            if (confirmed)
+                table.push('</i>');
+            table.push('</td>');
+        }
+
+        table.push('</tr>');
+    }
+
+    function createTable (data, tabletop) {
+        var mainTable = [], 
+            vitTable = [],
+            wcTable = [],
+            waitTable = [],
+            mainCount = 1, vitCount = 1, waitCount = 1,
+            
+
+        data.forEach (function (v, index){                
+
+                if (vit.indexOf(v['команда']) > -1) {
+                    addToTable(vitTable, v, vitCount++, true);
+                } else if (wc.indexOf(v['команда']) > -1) {
+                    addToTable(wcTable, v, vitCount++, true);
+                } else {
+                    if (mainCount <= 50)
+                        addToTable(mainTable, v, mainCount++, false);
+                    else 
+                        addToTable(waitTable, v, waitCount++, false);
+                }
+
+        });
+        
+        $('#vitHeader').css("visibility", "visible");
+        $('#waitHeader').css("visibility", "visible");
+        $('#wcHeader').css("visibility", "visible");
+        $('table').css("visibility", "visible");
+        $('#mainTable').append(mainTable.join(''));
+        $('#waitTable').append(waitTable.join(''));
+        $('#vitTable').append(vitTable.join(''));
+        $('#wcTable').append(wcTable.join(''));
+        spinner.stop();
+    }
+
+</script>
+</body>
+</html>

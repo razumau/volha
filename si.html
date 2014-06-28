@@ -96,7 +96,7 @@
         table.push('</td><td class="figure">');
         table.push(v['сумма']);
         table.push('</td><td class="figure">');
-        table.push(v['ответы за 50']);
+        table.push(v['50']);
         table.push('</td>');
         table.push('</tr>');
     }
@@ -108,14 +108,14 @@
         data.sort(function (a, b) {
            var result = a['сумма'] - b['сумма'];
            if (result === 0){
-               return a['ответы за 50'] - b['ответы за 50'];
+               return a['50'] - b['50'];
            } else {
                return result;
            }
         });
 
         data.forEach (function (v, index){                
-            addToTable(mainTable, v, mainCount);
+            addToTable(mainTable, v, mainCount++);
         });
         
         $('table').css("visibility", "visible");

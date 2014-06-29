@@ -119,7 +119,11 @@
         data.sort(function (a, b) {
            return b['сумма'] - a['сумма'];
         });
-
+        
+        var t = data[2];
+        data[2] = data[3];
+        data[3] = t;
+        
         data.forEach (function (v, index){                
             addToTable(mainTable, v, mainCount++);
         });

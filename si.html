@@ -57,6 +57,7 @@
                     <th>команда</th>
                     <th>сумма</th>
                     <th>за&nbsp;<span class='figure'>50</span></th>
+                    <th>за&nbsp;<span class='figure'>40</span></th>
                 </tr>
             </table>
             
@@ -109,10 +110,12 @@
             
         data.sort(function (a, b) {
            var result = b['сумма'] - a['сумма'];
-           if (result === 0){
+           if (result === 0) {
                result = b['пятьдесят'] - a['пятьдесят'];
-           if (result === 0)
+           }
+           if (result === 0) {
                 result = b['сорок'] - a['сорок'];
+           }
             return result;
         });
 

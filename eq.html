@@ -51,7 +51,11 @@
                 <a href="./list.html" data-no-instant>команды</a>
         </ul>
         <div class="col-md-6 main">
-            
+        <h3>финал</h3>    
+        Весёлые однорукие гномы <span class='figure'>410</span><br>
+        МИД-<span class='figure'>2</span> <span class='figure'>150+40</span><br>
+        Middle <span class='figure'>150−50</span><br>
+        ВАСХОД <span class='figure'>20</span>
     </div> 
 </div>
 </div>      
@@ -61,97 +65,6 @@
 <script src='./js/spin.min.js'></script>
 <script src="./js/instantclick.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>
-<!--script type="text/javascript">
 
-    var spinner = new Spinner().spin();
-    $('#mainTable').append(spinner.el);
-
-    window.onload =  function() { init() };
-
-
-    var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=17ENIPklpTG9Fbzg8DSWgjpfCiLz8pbuOxYFbDlrJQcU&output=html';
-
-    function init() {
-
-        Tabletop.init( { key: public_spreadsheet_url,
-                         callback: createTable,
-                         simpleSheet: true } )
-    }
-
-    function addToTable (table, v, number, isVit) {
-
-        var confirmed = v['подтверждение'];
-        table.push('<tr><td class="figure">');
-        if (!confirmed)
-            table.push('<i>');
-        if (isVit) {
-            table.push((number + 50).toString());
-        } else {
-            table.push((number).toString());
-        }
-        if (!confirmed)
-            table.push('</i>');
-        table.push('</td><td>');
-        if (!confirmed)
-            table.push('<i>');
-        table.push(v['команда']);
-        if (!confirmed)
-            table.push('</i>');
-        table.push('</td>');
-
-        if (!isVit) {
-            table.push('<td>');
-            if (!confirmed)
-                table.push('<i>');
-            table.push(v['город']);
-            if (!confirmed)
-                table.push('</i>');
-            table.push('</td><td class="figure">');
-            if (!confirmed)
-                table.push('<i>');
-            table.push(v['место']);
-            if (confirmed)
-                table.push('</i>');
-            table.push('</td>');
-        }
-
-        table.push('</tr>');
-    }
-
-    function createTable (data, tabletop) {
-        var mainTable = [], 
-            vitTable = [],
-            wcTable = [],
-            waitTable = [],
-            mainCount = 1, vitCount = 1, waitCount = 1,
-            
-
-        data.forEach (function (v, index){                
-
-                if (vit.indexOf(v['команда']) > -1) {
-                    addToTable(vitTable, v, vitCount++, true);
-                } else if (wc.indexOf(v['команда']) > -1) {
-                    addToTable(wcTable, v, vitCount++, true);
-                } else {
-                    if (mainCount <= 50)
-                        addToTable(mainTable, v, mainCount++, false);
-                    else 
-                        addToTable(waitTable, v, waitCount++, false);
-                }
-
-        });
-        
-        $('#vitHeader').css("visibility", "visible");
-        $('#waitHeader').css("visibility", "visible");
-        $('#wcHeader').css("visibility", "visible");
-        $('table').css("visibility", "visible");
-        $('#mainTable').append(mainTable.join(''));
-        $('#waitTable').append(waitTable.join(''));
-        $('#vitTable').append(vitTable.join(''));
-        $('#wcTable').append(wcTable.join(''));
-        spinner.stop();
-    }
-
-</script-->
 </body>
 </html>

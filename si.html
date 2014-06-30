@@ -96,7 +96,9 @@
         table.push('</td><td class="figure">');
         table.push(v['сумма']);
         table.push('</td><td class="figure">');
-        table.push(v['50']);
+        table.push(v['пятьдесят']);
+        table.push('</td><td class="figure">');
+        table.push(v['сорок']);
         table.push('</td>');
         table.push('</tr>');
     }
@@ -108,10 +110,10 @@
         data.sort(function (a, b) {
            var result = b['сумма'] - a['сумма'];
            if (result === 0){
-               return b['50'] - a['50'];
-           } else {
-               return result;
-           }
+               result = b['пятьдесят'] - a['пятьдесят'];
+           if (result === 0)
+                result = b['сорок'] - a['сорок'];
+            return result;
         });
 
         data.forEach (function (v, index){                

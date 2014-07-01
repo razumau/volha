@@ -169,6 +169,10 @@ h3.regulations {
 	font-size: 22px;
 }
 
+.eq {
+	font-weight: bold;
+}
+
 .row {
 	background-color: #aaaaaa;
 }

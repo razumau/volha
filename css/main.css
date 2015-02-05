@@ -1,7 +1,10 @@
 body {
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'Merriweather', sans-serif;
 	font-size: 18pt;
 	line-height: 1.5;
+
+	/*-webkit-font-feature-settings: 'pnum', 'onum';
+	font-feature-settings: 'tnum', "onum";*/
 	background-color: #aaaaaa;
 }
 

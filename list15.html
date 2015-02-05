@@ -32,24 +32,11 @@
     <div class="row">
         <ul class="col-md-2 col-md-offset-3 nav nav-pills nav-stacked">
             <li>
-                <a href="./index.html">расписание</a>
-            <li>
-                <a href="./map.html">карта</a>
-             <li>
-                <a href="./chgk.html" data-no-instant>результаты <span class='caps'>чгк</span></a>
-            <li>
-                <a href="./si.html" data-no-instant>результаты <span class='caps'>си</span></a>
-            <li>
-                <a href="./eq.html">результаты <span class='caps'>эк</span></a>
-                
-                <li>   
-                <a href="./regulations.html">регламент</a>
-            <li>
-                <a href="./editors.html">редакторы</a>
-            <li>   
-                <a href="./hotels.html" data-no-instant>гостиницы</a>
+                <a href="./index.html">объявление</a>
             <li class='active'>
                 <a href="./list.html" data-no-instant>команды</a>
+            <li>
+                <a href="./editors.html">редакторы</a>
         </ul>
         <div class="col-md-6 main">
             <table class='table teams' id='mainTable'>
@@ -57,33 +44,6 @@
                     <th>#</th>
                     <th>команда</th>
                     <th>город</th>
-                    <th title='в рейтинге МАК'>место</th>
-                </tr>
-            </table>
-            <br/>
-            <h3 id='vitHeader'>Витебские команды</h3>
-            <table class='table teams' id='vitTable'>
-                <tr>
-                    <th>#</th>
-                    <th>команда</th>
-                </tr>
-            </table>
-            <br/>
-            <h3 id='wcHeader'>Вайлд-кард</h3>
-            <table class='table teams' id='wcTable'>
-                <tr>
-                    <th>#</th>
-                    <th>команда</th>
-                </tr>
-            </table>
-            <br/>
-            <h3 id='waitHeader'>Список ожидания</h3>
-            <table class='table teams' id='waitTable'>
-                <tr>
-                    <th>#</th>
-                    <th>команда</th>
-                    <th>город</th>
-                    <th title='в рейтинге МАК'>место</th>
                 </tr>
             </table>
     </div> 
@@ -102,7 +62,8 @@
 
     window.onload =  function() { init() };
 
-    var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=1cdG4pTZjv5cunthzsKfSHj9NsIOAwJVNRA4MWuEjIIw&output=html';
+    
+    var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=1_mNN7NPsxEUaDuH_j6SN4KZLvYXQeLWXiWKZCW_y2c8&output=html';
 
     function init() {
 
@@ -111,58 +72,25 @@
                          simpleSheet: true } )
     }
 
-    function addToTable (table, v, number, isVit) {
+    function addToTable (table, v, number) {
 
-        var confirmed = v['подтверждение'];
         table.push('<tr><td class="figure">');
-        if (!confirmed)
-            table.push('<i>');
-        if (isVit) {
-            table.push((number + 50).toString());
-        } else {
-            table.push((number).toString());
-        }
-        if (!confirmed)
-            table.push('</i>');
+        table.push((number).toString());
         table.push('</td><td>');
-        if (!confirmed)
-            table.push('<i>');
         table.push(v['команда']);
-        if (!confirmed)
-            table.push('</i>');
-        table.push('</td>');
-
-        if (!isVit) {
-            table.push('<td>');
-            if (!confirmed)
-                table.push('<i>');
-            table.push(v['город']);
-            if (!confirmed)
-                table.push('</i>');
-            table.push('</td><td class="figure">');
-            if (!confirmed)
-                table.push('<i>');
-            table.push(v['место']);
-            if (confirmed)
-                table.push('</i>');
-            table.push('</td>');
-        }
-
-        table.push('</tr>');
+        table.push('</td><td>');
+        table.push(v['город']);
+        table.push('</td></tr>');
     }
 
     function createTable (data, tabletop) {
         var mainTable = [], 
-            vitTable = [],
-            wcTable = [],
-            waitTable = [],
-            mainCount = 1, vitCount = 1, waitCount = 1,
-            vit = ['Гремлины', 'Дельтаплан', 'Нелюди в белом', 'Ход конём', 'Пчёлы Севера'],
-            wc = ['Keiseker', 'Kéisécker'];
+            mainCount = 1;
 
-        data.forEach (function (v, index){                
+        data.forEach (function (v, index){     
+          addToTable(mainTable, v, mainCount++);           
 
-                if (vit.indexOf(v['команда']) > -1) {
+        /*        if (vit.indexOf(v['команда']) > -1) {
                     addToTable(vitTable, v, vitCount++, true);
                 } else if (wc.indexOf(v['команда']) > -1) {
                     addToTable(wcTable, v, vitCount++, true);
@@ -171,18 +99,12 @@
                         addToTable(mainTable, v, mainCount++, false);
                     else 
                         addToTable(waitTable, v, waitCount++, false);
-                }
+                }*/
 
         });
         
-        $('#vitHeader').css("visibility", "visible");
-        $('#waitHeader').css("visibility", "visible");
-        $('#wcHeader').css("visibility", "visible");
         $('table').css("visibility", "visible");
         $('#mainTable').append(mainTable.join(''));
-        $('#waitTable').append(waitTable.join(''));
-        $('#vitTable').append(vitTable.join(''));
-        $('#wcTable').append(wcTable.join(''));
         spinner.stop();
     }
 

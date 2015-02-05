@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,74 +9,84 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <script src="http://use.typekit.net/gey4twz.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
-    <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Alegreya+Sans:400,700,400i">
+    <script>
+    try {
+        Typekit.load();
+    } catch (e) {}
+    </script>
     <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-43833229-2']);
+    _gaq.push(['_trackPageview']);
 
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-43833229-2']);
-          _gaq.push(['_trackPageview']);
-
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
     </script>
 </head>
-<body>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-3 title">
-            кубок княгини Ольги</div>
-    </div>
-    <div class="row">
-        <ul class="col-md-2 col-md-offset-3 nav nav-pills nav-stacked">
-            <li>
-                <a href="./index.html">объявление</a>
-            <li class='active'>
-                <a href="./list15.html" data-no-instant>команды</a>
-            <li>
-                <a href="./editors15.html">редакторы</a>
-        </ul>
-        <div class="col-md-6 main">
-            <table class='table teams' id='mainTable'>
-                <tr>
-                    <th>#</th>
-                    <th>команда</th>
-                    <th>город</th>
-                </tr>
-            </table>
-    </div> 
-</div>
-</div>      
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script src='./js/tabletop.js'></script>
-<script src='./js/spin.min.js'></script>
-<script src="./js/instantclick.js" data-no-instant></script>
-<script data-no-instant>InstantClick.init();</script>
-<script type="text/javascript">
 
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-3 title">
+                кубок княгини Ольги</div>
+        </div>
+        <div class="row">
+            <ul class="col-md-2 col-md-offset-3 nav nav-pills nav-stacked">
+                <li>
+                    <a href="./index.html">объявление</a>
+                    <li class='active'>
+                        <a href="./list15.html" data-no-instant>команды</a>
+                        <li>
+                            <a href="./editors15.html">редакторы</a>
+            </ul>
+            <div class="col-md-6 main">
+                <table class='table teams' id='mainTable'>
+                    <tr>
+                        <th>#</th>
+                        <th>команда</th>
+                        <th>город</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src='./js/tabletop.js'></script>
+    <script src='./js/spin.min.js'></script>
+    <script src="./js/instantclick.js" data-no-instant></script>
+    <script data-no-instant>
+    InstantClick.init();
+    </script>
+    <script type="text/javascript">
     var spinner = new Spinner().spin();
     $('#mainTable').append(spinner.el);
 
-    window.onload =  function() { init() };
+    window.onload = function() {
+        init()
+    };
 
-    
+
     var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=1_mNN7NPsxEUaDuH_j6SN4KZLvYXQeLWXiWKZCW_y2c8&output=html';
 
     function init() {
 
-        Tabletop.init( { key: public_spreadsheet_url,
-                         callback: createTable,
-                         simpleSheet: true } )
+        Tabletop.init({
+            key: public_spreadsheet_url,
+            callback: createTable,
+            simpleSheet: true
+        })
     }
 
-    function addToTable (table, v, number) {
+    function addToTable(table, v, number) {
 
-        table.push('<tr><td class="figure">');
+        table.push('<tr><td>');
         table.push((number).toString());
         table.push('</td><td>');
         table.push(v['команда']);
@@ -84,31 +95,19 @@
         table.push('</td></tr>');
     }
 
-    function createTable (data, tabletop) {
-        var mainTable = [], 
+    function createTable(data, tabletop) {
+        var mainTable = [],
             mainCount = 1;
 
-        data.forEach (function (v, index){     
-          addToTable(mainTable, v, mainCount++);           
-
-        /*        if (vit.indexOf(v['команда']) > -1) {
-                    addToTable(vitTable, v, vitCount++, true);
-                } else if (wc.indexOf(v['команда']) > -1) {
-                    addToTable(wcTable, v, vitCount++, true);
-                } else {
-                    if (mainCount <= 50)
-                        addToTable(mainTable, v, mainCount++, false);
-                    else 
-                        addToTable(waitTable, v, waitCount++, false);
-                }*/
-
+        data.forEach(function(v, index) {
+            addToTable(mainTable, v, mainCount++);
         });
-        
+
         $('table').css("visibility", "visible");
         $('#mainTable').append(mainTable.join(''));
         spinner.stop();
     }
-
-</script>
+    </script>
 </body>
+
 </html>

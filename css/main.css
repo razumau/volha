@@ -96,7 +96,7 @@ a:hover {
 }
 @media only screen and (min-width: 991px) {
     .main {
-        min-height: 700px;
+        min-height: 500px;
     }
 }
 .nav li a {

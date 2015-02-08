@@ -1,27 +1,8 @@
----
-layout: default
-active: list
----
-<table class='table teams' id='mainTable'>
-    <tr>
-        <th>#</th>
-        <th>команда</th>
-        <th>город</th>
-    </tr>
-</table>
-</div>
-</div>
-</div>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<script src='./js/tabletop.js'></script>
-<script src='./js/spin.min.js'></script>
-<script type="text/javascript">
-    var spinner = new Spinner().spin();
+var spinner = new Spinner().spin();
 $('#mainTable').append(spinner.el);
 
 window.onload = function() {
-    init();
+    init()
 };
 
 
@@ -59,4 +40,3 @@ function createTable(data, tabletop) {
     $('#mainTable').append(mainTable.join(''));
     spinner.stop();
 }
-</script>

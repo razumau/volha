@@ -35,9 +35,10 @@ h3 {
     background-color: #80deea !important;
 }
 
-.nav-pills > li:hover {
+.nav > li > a:hover {
     background-color: #b2ebf2;
 }
+
 
 .nav-stacked>li+li {
 	margin-top: 0px;
@@ -230,6 +231,10 @@ img {
 
 #tooltip .fa {
     font-size: 18px;
+}
+
+.fa {
+    font-size: 16px !important;
 }
 #tooltip:after
 /* triangle decoration */

@@ -1,95 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Кубок княгини Ольги</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/PT+Sans:400,700,400i">
-    <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Alegreya+Sans:400,700,400i">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/tooltip.css">
-    <script type="text/javascript">
-
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-43833229-2']);
-          _gaq.push(['_trackPageview']);
-
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-
-    </script>
-</head>
-<body>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-3 title">
-            кубок княгини Ольги</div>
-    </div>
-    <div class="row">
-        <ul class="col-md-2 col-md-offset-3 nav nav-pills nav-stacked">
-            <li>
-                <a href="./index.html">расписание</i></a>
-            <li>
-                <a href="./map.html">карта</a>
-                 <li>
-                <a href="./chgk.html" data-no-instant>результаты <span class='caps'>чгк</span></a>
-            <li>
-                <a href="./si.html" data-no-instant>результаты <span class='caps'>си</span></a>
-            <li>
-                <a href="./eq.html" data-no-instant>результаты <span class='caps'>эк</span></a>
-            
-                <li>   
-                <a href="./regulations.html">регламент</a>
-            <li>
-                <a href="./editors.html">редакторы</a>
-            <li class="active">   
-                <a href="./hotels.html" data-no-instant>гостиницы</a>
-            <li>
-                <a href="./list.html" data-no-instant>команды</a>
-        </ul>
-        <div class="col-md-6 main hotels">
-        <p>чтобы перевести цены в евро и российские рубли, наведите курсор мыши или нажмите пальцем; чтобы увидеть сайт и фотографии гостиницы, нажмите на её название.
-        </p>
-        <p>
+---
+layout: default
+active: hotels
+---
+                <p>чтобы перевести цены в евро и российские рубли (по курсу 25 февраля), наведите курсор мыши или нажмите пальцем; чтобы увидеть сайт и фотографии гостиницы, нажмите на её название.
+                </p>
+                <!--p>
             если вы уже выбрали гостиницу (или решили искать квартиру), заполните, пожалуйста, <a href='https://docs.google.com/forms/d/1RPgqYc2jqd4YUFjBhq74hIwoqhhb4UnmvMv2lgWRANQ/viewform'>эту форму</a>.
-        </p>
-        <p>
-            <a target='_blank' href='http://gorodvitebsk.by/firms/vityaz'>«Витязь»</a>: 
-            «эконом» (блоки «два + три») — <span class='figure' rel='tooltip' title='9 <i class="fa fa-eur"></i><br/>410 <i class="fa fa-rub"></i>'>120 000</span> рублей за место для граждан Беларуси и России,  <span class='figure' rel='tooltip' title='12 <i class="fa fa-eur"></i><br/>550 <i class="fa fa-rub"></i>'>160 000</span> — для граждан других стран; «люкс» — <span class='figure' rel='tooltip' title='29 <i class="fa fa-eur"></i><br/>1380 <i class="fa fa-rub"></i>'>400 000</span> и <span class='figure' rel='tooltip' title='38 <i class="fa fa-eur"></i><br/>1800 <i class="fa fa-rub"></i>'>520 000</span> соответственно.
-        </p>
+        </p-->
+                <p>
+                    <a target='_blank' href='http://gorodvitebsk.by/firms/vityaz'>«Витязь»</a>:  «эконом» (блоки «два + три») — <span rel='tooltip' title='8 <i class="fa fa-eur"></i><br/>580 <i class="fa fa-rub"></i>'>140 000</span> рублей за место для граждан Беларуси и России, <span rel='tooltip' title='10 <i class="fa fa-eur"></i><br/>750 <i class="fa fa-rub"></i>'>180 000</span> — для граждан других стран; «люкс» — <span rel='tooltip' title='25 <i class="fa fa-eur"></i><br/>1740 <i class="fa fa-rub"></i>'>420 000</span> и <span rel='tooltip' title='31 <i class="fa fa-eur"></i><br/>2200 <i class="fa fa-rub"></i>'>530 000</span> соответственно.
+                </p>
 
-        <p>
-        <a target='_blank' href='http://hotel-vitebsk.by/'>«Витебск»</a>: <span class='figure' rel='tooltip' title='30 <i class="fa fa-eur"></i><br/>1400 <i class="fa fa-rub"></i>'>406 800</span> за двухместный «эконом», <span class='figure' rel='tooltip' title='43 <i class="fa fa-eur"></i><br/>2000 <i class="fa fa-rub"></i>'>591 100</span> — за двухместный «стандарт», одноместные номера стоят от <span class='figure' rel='tooltip' title='23 <i class="fa fa-eur"></i><br/>1090 <i class="fa fa-rub"></i>'>316 100</span> до <span class='figure' rel='tooltip' title='37 <i class="fa fa-eur"></i><br/>1760 <i class="fa fa-rub"></i>'>510 700</span>, полный список можно увидеть <a target="_blank" href='http://hotel-vitebsk.by/index.php?option=com_content&task=view&id=25&Itemid=37'>тут</a>. В стоимость входит завтрак за <span class='figure' rel='tooltip' title='4,5 <i class="fa fa-eur"></i><br/>210 <i class="fa fa-rub"></i>'>60 000</span> рублей; в некоторые номера можно добавить третье место (раскладушку) за <span class='figure' rel='tooltip' title='4,7 <i class="fa fa-eur"></i><br/>225 <i class="fa fa-rub"></i>'>65 000</span> рублей.
-        </p>
+                <p>
+                    <a target='_blank' href='http://hotel-vitebsk.by/'>«Витебск»</a>: <span rel='tooltip' title='19 <i class="fa fa-eur"></i><br/>1320 <i class="fa fa-rub"></i>'>320 000</span> за двухместный «эконом», <span rel='tooltip' title='30 <i class="fa fa-eur"></i><br/>2060 <i class="fa fa-rub"></i>'>500 000</span> — за двухместный «стандарт», одноместные номера стоят от <span rel='tooltip' title='17 <i class="fa fa-eur"></i><br/>1200 <i class="fa fa-rub"></i>'>290 000</span> до <span rel='tooltip' title='28 <i class="fa fa-eur"></i><br/>2000 <i class="fa fa-rub"></i>'>480 000</span>, полный список можно увидеть <a target="_blank" href='http://hotel-vitebsk.by/index.php?option=com_content&task=view&id=25&Itemid=37'>тут</a>. В стоимость входит завтрак за <span rel='tooltip' title='3,5 <i class="fa fa-eur"></i><br/>250 <i class="fa fa-rub"></i>'>60 000</span> рублей; в некоторые номера можно добавить третье место (раскладушку) за <span rel='tooltip' title='3,8 <i class="fa fa-eur"></i><br/>270 <i class="fa fa-rub"></i>'>65 000</span> рублей.
+                </p>
 
-        <p>
-            <a target='_blank' href='http://luchesa.by/ru/3/'>«Лучёса»</a>: двухместные номера — от <span class='figure' rel='tooltip' title='38 <i class="fa fa-eur"></i><br/>1800 <i class="fa fa-rub"></i>'>518 000</span> рублей, одноместные — от <span class='figure' rel='tooltip' title='33 <i class="fa fa-eur"></i><br/>1550 <i class="fa fa-rub"></i>'>448 000</span>. Завтрак — <span class='figure' rel='tooltip' title='6,5 <i class="fa fa-eur"></i><br/>310 <i class="fa fa-rub"></i>'>90 000</span> (не включён в стоимость).
-        </p>
-        <p>
-            <a target='_blank' href='http://zt-hotel.by/docs/hotel.html'>«Золотой телёнок»</a>: двухместные номера — <span class='figure' rel='tooltip' title='22 <i class="fa fa-eur"></i><br/>1030 <i class="fa fa-rub"></i>'>300 000</span> и <span class='figure' rel='tooltip' title='28 <i class="fa fa-eur"></i><br/>1310 <i class="fa fa-rub"></i>'>380 000</span>, одноместный — <span class='figure' rel='tooltip' title='17 <i class="fa fa-eur"></i><br/>830 <i class="fa fa-rub"></i>'>240 000</span>. Завтрак — <span class='figure' rel='tooltip' title='2,5 <i class="fa fa-eur"></i><br/>120 <i class="fa fa-rub"></i>'>35 000</span>.
-        </p>
-        <p>
-            <a target='_blank' href='http://vitebsktourist.by/index.php/gostinitsa-vetraz.html'>«Ветразь»</a>: двухместный «стандарт» — <span class='figure' rel='tooltip' title='35 <i class="fa fa-eur"></i><br/>1650 <i class="fa fa-rub"></i>'>480 000</span>, одноместный — <span class='figure' rel='tooltip' title='25 <i class="fa fa-eur"></i><br/>1200 <i class="fa fa-rub"></i>'>350 000</span>.
-        </p>
-        <p>
-            <a target='_blank' href='http://gorodvitebsk.by/firms/gybernskii-hotel'>Гостиница центра «Губернский»</a>: одноместный «эконом» — <span class='figure' rel='tooltip' title='30 <i class="fa fa-eur"></i><br/>1450 <i class="fa fa-rub"></i>'>420 000</span>, двухместные номера — от <span class='figure' rel='tooltip' title='44 <i class="fa fa-eur"></i><br/>2100 <i class="fa fa-rub"></i>'>605 000</span>.
-        </p>
-        <p>
-            <a target='_blank' href='http://www.eridan-vitebsk.com/nomera.html'>«Эридан»</a>: одноместный номер — <span class='figure' rel='tooltip' title='35 <i class="fa fa-eur"></i><br/>1650 <i class="fa fa-rub"></i>'>480 000</span>, двухместный — <span class='figure' rel='tooltip' title='55 <i class="fa fa-eur"></i><br/>2550 <i class="fa fa-rub"></i>'>740 000</span>, двухместный «полулюкс» — <span class='figure' rel='tooltip' title='60 <i class="fa fa-eur"></i><br/>2850 <i class="fa fa-rub"></i>'>820 000</span>. Завтрак — <span class='figure' rel='tooltip' title='6,5 <i class="fa fa-eur"></i><br/>310 <i class="fa fa-rub"></i>'>90 000</span>.
-        </p>
-    </div> 
-</div>
-</div>      
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src='./js/tooltip.js'></script>
-    <script src="./js/instantclick.js" data-no-instant></script>
-    <script data-no-instant>InstantClick.init();</script>
-</body>
-</html>
+                <p>
+                    <a target='_blank' href='http://luchesa.by/ru/3/'>«Лучёса»</a>: двухместные номера — от <span rel='tooltip' title='42 <i class="fa fa-eur"></i><br/>3000 <i class="fa fa-rub"></i>'>718 000</span> рублей, одноместные — от <span rel='tooltip' title='28 <i class="fa fa-eur"></i><br/>1940 <i class="fa fa-rub"></i>'>470 000</span>. Завтрак — <span rel='tooltip' title='4,1 <i class="fa fa-eur"></i><br/>290 <i class="fa fa-rub"></i>'>70 000</span> (не включён в стоимость).
+                </p>
+                <p>
+                    <a target='_blank' href='http://zt-hotel.by/docs/hotel.html'>«Золотой телёнок»</a>: двухместные номера — <span rel='tooltip' title='18 <i class="fa fa-eur"></i><br/>1230 <i class="fa fa-rub"></i>'>300 000</span> и <span rel='tooltip' title='22 <i class="fa fa-eur"></i><br/>1560 <i class="fa fa-rub"></i>'>380 000</span>, одноместный — <span rel='tooltip' title='14 <i class="fa fa-eur"></i><br/>1000 <i class="fa fa-rub"></i>'>240 000</span>. Завтрак — <span rel='tooltip' title='2 <i class="fa fa-eur"></i><br/>150 <i class="fa fa-rub"></i>'>35 000</span>.
+                </p>
+                <p>
+                    <a target='_blank' href='http://vitebsktourist.by/index.php/gostinitsa-vetraz.html'>«Ветразь»</a>: двухместный «стандарт» — <span rel='tooltip' title='33 <i class="fa fa-eur"></i><br/>2300 <i class="fa fa-rub"></i>'>560 000</span>, одноместный — <span rel='tooltip' title='24 <i class="fa fa-eur"></i><br/>1700 <i class="fa fa-rub"></i>'>415 000</span>. Завтрак — <span rel='tooltip' title='3,5 <i class="fa fa-eur"></i><br/>250 <i class="fa fa-rub"></i>'>60 000</span> рублей.
+                </p>
+                
+            </div>
+        </div>
+    </div>
+    
+  

@@ -56,6 +56,19 @@
             {% endif %}
             <a href="./list15.html">команды</a>
             
+            {% if page.active == "map" %} 
+                <li class="active">
+            {% else %}
+                <li>
+            {% endif %}       
+            <a href="./map.html">карта</a>
+
+            {% if page.active == "hotels" %} 
+                <li class="active">
+            {% else %}
+                <li>
+            {% endif %}       
+            <a href="./hotels.html">гостиницы</a>
 
             {% if page.active == "editors" %} 
                 <li class="active">
@@ -90,6 +103,10 @@
             {% endif %}
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
             <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+            {% if page.active == "hotels" %} 
+            <script src='./js/tooltip.js'></script>
+             {% endif %}  
 </body>
 
 </html>

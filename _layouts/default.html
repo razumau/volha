@@ -54,7 +54,7 @@
             {% else %}
                 <li>
             {% endif %}
-            <a href="./list15.html">команды</a>
+            <a href="./list15.html" data-no-instant>команды</a>
             
             {% if page.active == "map" %} 
                 <li class="active">
@@ -105,9 +105,7 @@
             <script data-no-instant>
                 InstantClick.init();
             </script>
-            {% if page.active == "list" %}
-            <!--script src="./js/loadTeams.js"></script-->
-            {% endif %}
+            
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
             <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 

@@ -14,6 +14,7 @@ active: chgk
         <th>IV</th>
         <th>V</th>
     </tr>
+    <tbody>
 
     </tbody>
 </table>
@@ -25,15 +26,23 @@ active: chgk
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <!--script src='./js/spin.min.js'></script-->
 <script type="text/javascript">
-window.onload = function() {
+var updateTable = function() {
+	console.log('asdf')
+	var table = $("#mainTable")
     $.ajax({
         url: "http://localhost:3000/11-JsYW-XRNdkFrqlWQ3c6RBGSMWllYWZE26iO4qiIFw",
         cache: false
     }).done(function(html) {
-        $("#mainTable").append(html);
+
+    	var header = '<tr><th>#</th><th>команда</th><th>сумма</th><th>I</th>' + 
+        			'<th>II</th><th>III</th><th>IV</th><th>V</th></tr>';
+        table.html(header + html);
     })
-    
-
-
 };
+
+window.onload = function () {
+	updateTable();
+	setInterval(updateTable, 120000);
+};
+
 </script>

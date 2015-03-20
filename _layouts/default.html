@@ -55,6 +55,27 @@
                 <li>
             {% endif %}
             <a href="./list15.html" data-no-instant>команды</a>
+
+            {% if page.active == "chgk" %}
+                <li class="active">
+            {% else %}
+                <li>
+            {% endif %}
+            <a href="./chgk.html" data-no-instant>результаты <span class="caps">чгк</span></a>
+
+            {% if page.active == "si" %}
+                <li class="active">
+            {% else %}
+                <li>
+            {% endif %}
+            <a href="./si.html" data-no-instant>результаты <span class="caps">си</span></a>
+
+            {% if page.active == "eq" %}
+                <li class="active">
+            {% else %}
+                <li>
+            {% endif %}
+            <a href="./eq.html" data-no-instant>результаты <span class="caps">эк</span></a>
             
             {% if page.active == "map" %} 
                 <li class="active">

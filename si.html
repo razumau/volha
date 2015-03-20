@@ -1,0 +1,36 @@
+---
+layout: default
+active: si
+---
+<p>схема очной части: </p>
+<h3>результаты отбора</h3>
+<table class='table teams' id='mainTable'>
+    <tr>
+        <th>#</th>
+        <th>игрок</th>
+        <th>сумма</th>
+    </tr>
+
+    </tbody>
+</table>
+
+</div>
+</div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<!--script src='./js/spin.min.js'></script-->
+<script type="text/javascript">
+window.onload = function() {
+    $.ajax({
+        url: "http://localhost:3000/1LsvBGl8ZgxDQIaHLcLpHqAxuHOmUG1PBTasB2YMsFAw",
+                                     
+        cache: false
+    }).done(function(html) {
+        $("#mainTable").append(html);
+    })
+    
+
+
+};
+</script>

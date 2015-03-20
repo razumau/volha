@@ -2,7 +2,7 @@
 layout: default
 active: si
 ---
-<p>схема очной части: </p>
+<h3>схема очной части</p>
 <h3>результаты отбора</h3>
 <table class='table teams' id='mainTable'>
     <tr>
@@ -24,7 +24,7 @@ active: si
 window.onload = function() {
     $.ajax({
         url: "http://localhost:3000/1LsvBGl8ZgxDQIaHLcLpHqAxuHOmUG1PBTasB2YMsFAw",
-                                     
+
         cache: false
     }).done(function(html) {
         $("#mainTable").append(html);

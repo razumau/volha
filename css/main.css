@@ -100,8 +100,19 @@ a:hover {
         min-height: 500px;
     }
 }
+
+@media only screen and (max-width: 450px) {
+    .container-fluid {
+        padding-left: 2px;
+    }
+
+    ul.nav {
+        padding-left: 5px;
+    }
+}
+
 .nav li a {
-    padding-left: 10%;
+    padding-left: 7%;
 }
 .hotels .figure {
     font-weight: 700;
@@ -151,8 +162,8 @@ p.desc {
     font-size: 85%;
 }
 .main {
-    padding-top: 10px;
-    padding-left: 20px;
+    padding-top: 5px;
+    /*padding-left: 20px;*/
     padding-bottom: 2%;
     z-index: 10;
 }

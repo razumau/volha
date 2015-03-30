@@ -55,6 +55,13 @@
                 <li>
             {% endif %}
             <a href="../school/list.html" data-no-instant>команды</a>
+
+            {% if page.active == "map" %} 
+                <li class="active">
+            {% else %}
+                <li>
+            {% endif %}       
+            <a href="./map.html">карта</a>
             
 
             {% if page.active == "editors" %} 

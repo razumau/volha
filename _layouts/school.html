@@ -61,7 +61,34 @@
             {% else %}
                 <li>
             {% endif %}       
-            <a href="./map.html">карта</a>
+            <a href="../school/map.html">карта</a>
+
+            {% if page.active == "chgk" %}
+                <li class="active">
+            {% else %}
+                <li>
+            {% endif %}
+            <a href="../school/chgk.html" data-no-instant>результаты <span class="caps">чгк</span></a>
+
+            {% if page.active == "si" %}
+                <li class="active">
+            {% else %}
+                <li>
+            {% endif %}
+            <a href="../school/si.html" data-no-instant>результаты <span class="caps">си</span></a>
+
+            {% if page.active == "br" %}
+                <li class="active"> <a href="#">результаты <span class="caps">бр</span></a>
+            {% else %}
+            {% endif %}
+           
+
+            {% if page.active == "eq" %}
+                <li class="active">
+            {% else %}
+                <li>
+            {% endif %}
+            <a href="../school/eq.html">результаты <span class="caps">эк</span></a>
             
             {% if page.active == "regulations" %} 
                 <li class="active">
@@ -77,8 +104,6 @@
             {% endif %}       
             <a href="../school/editors.html">редакторы</a>
 
-            
-            <li><a href="mailto:volha.by@outlook.com">заявиться <i class="fa fa-envelope"></i></a>
 
             <li><a href="https://twitter.com/volhaby">твиттер <i class="fa fa-twitter"></i></a>
 
@@ -100,9 +125,6 @@
             <script data-no-instant>
                 InstantClick.init();
             </script>
-            {% if page.active == "list" %}
-            <!--script src="./js/loadTeams.js"></script-->
-            {% endif %}
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
             <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </body>

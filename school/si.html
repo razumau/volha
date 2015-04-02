@@ -1,18 +1,11 @@
 ---
-layout: default
+layout: school
 active: si
 ---
-<h3>финал:</h3>
-  Станислав Адаскевич 230<br>
-  Юрий Разумов 130<br>
-  Алексей Шередега 90<br>
-  Вадим Тух 60<br><br>
-<h3><a href="https://docs.google.com/spreadsheets/d/1tKK9F70sxlDtkTTLiEkNIDrFCDn8u3AUG5HdfQpTVik/pubhtml">полные результаты очной части</a></h3><br>
-<h3>результаты отбора</h3>
 <table class='table teams' id='mainTable'>
     <tr>
         <th>#</th>
-        <th>игрок</th>
+        <th>команда</th>
         <th>сумма</th>
     </tr>
 
@@ -27,7 +20,7 @@ active: si
 <script type="text/javascript">
 window.onload = function() {
     $.ajax({
-        url: "http://188.226.227.188/1LsvBGl8ZgxDQIaHLcLpHqAxuHOmUG1PBTasB2YMsFAw",
+        url: "http://188.226.227.188/19XZhJjgbKue4HYan7LGVrCd7l98tvE9EID3PrN98wuk",
         cache: false
     }).done(function(html) {
         $("#mainTable").append(html);

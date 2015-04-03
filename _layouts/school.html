@@ -77,18 +77,19 @@
             {% endif %}
             <a href="../school/si.html" data-no-instant>результаты <span class="caps">си</span></a>
 
-            {% if page.active == "br" %}
-                <li class="active"> <a href="#">результаты <span class="caps">бр</span></a>
-            {% else %}
-            {% endif %}
-           
-
             {% if page.active == "eq" %}
                 <li class="active">
             {% else %}
                 <li>
             {% endif %}
             <a href="../school/eq.html">результаты <span class="caps">эк</span></a>
+
+             {% if page.active == "br" %}
+                <li class="active"> 
+            {% else %}
+            <li>
+            {% endif %}
+           <a href="https://docs.google.com/spreadsheets/d/1Ye1OmXGutQrkslTfMwrG9VUr2N9WiMwEiLlzuIf3p8g" target="_blank">брейн-ринг <i class="fa fa-external-link-square"></i></span></a>
             
             {% if page.active == "regulations" %} 
                 <li class="active">

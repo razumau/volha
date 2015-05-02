@@ -1,18 +1,15 @@
 ---
 layout: school 
 active: list
-redirect_from: /list/
-redirect_from: /list.html
 ---
-<table class='table teams' id='mainTable'>
-    <tr>
-        <th>#</th>
-        <th>команда</th>
-        <th>город</th>
-        <th>синхрон</th>
-    </tr>
-
-    </tbody>
+<table class="table teams" id="mainTable">
+<tbody><tr>
+<th>#</th>
+<th>команда</th>
+<th>город</th>
+<th>синхрон</th>
+</tr>
+<tr><td>1</td><td>Игугундер</td><td>Долгопрудный</td><td>0</td></tr><tr><td>2</td><td>Ржавый и компания (ю)</td><td>Городок</td><td>0</td></tr><tr><td>3</td><td>Если что, это не мы</td><td>Москва</td><td>0</td></tr><tr><td>4</td><td>Че Гевера</td><td>Минск</td><td>2</td></tr><tr><td>5</td><td>Хорниндальсватнет</td><td>Витебск</td><td>3</td></tr><tr><td>6</td><td>Фрегат «Ирландия»</td><td>Минск</td><td>4</td></tr><tr><td>7</td><td>Солянка (ю)</td><td>Минск</td><td>8</td></tr><tr><td>8</td><td>Смех без причины</td><td>Минск</td><td>9</td></tr><tr><td>9</td><td>Alpen Gold</td><td>Минск</td><td>11</td></tr><tr><td>10</td><td>Роковые яйца</td><td>Минск</td><td>16</td></tr><tr><td>11</td><td>Золотое сечение</td><td>Солигорск</td><td>22</td></tr><tr><td>12</td><td>Те ребята</td><td>Солигорск</td><td>29</td></tr><tr><td>13</td><td>Углекислый глаз</td><td>Минск</td><td>32</td></tr><tr><td>14</td><td>Генеральная упорка</td><td>Брест</td><td>35</td></tr><tr><td>15</td><td>Шредер</td><td>Витебск</td><td>40</td></tr><tr><td>16</td><td>Магний (ю)</td><td>Витебск</td><td>42</td></tr><tr><td>17</td><td>Ту-15</td><td>Витебск</td><td>43</td></tr><tr><td>18</td><td>Солярис</td><td>Жодино</td><td>44</td></tr><tr><td>19</td><td>Natus Vincere (ю)</td><td>Витебск</td><td>48</td></tr><tr><td>20</td><td>Пегасы</td><td>Витебск</td><td>50</td></tr><tr><td>21</td><td>Растафари</td><td>Минск</td><td>55</td></tr><tr><td>22</td><td>Beatlam (ю)</td><td>Витебск</td><td>69</td></tr><tr><td>23</td><td>Brainstorm</td><td>Полоцк</td><td>71</td></tr><tr><td>24</td><td>Me Gusta (ю)</td><td>Витебск</td><td>79</td></tr><tr><td>25</td><td>НеЗя</td><td>Городок</td><td>89</td></tr><tr><td>26</td><td>Точка by</td><td>Солигорск</td><td>94</td></tr><tr><td>27</td><td>Виртуале (ю)</td><td>Боровка</td><td>109</td></tr><tr><td>28</td><td>Нестандарты (ю)</td><td>Жодино</td><td>192</td></tr><tr><td>29</td><td>Феечки</td><td>Полоцк</td><td>199</td></tr></tbody>
 </table>
 
 </div>
@@ -20,16 +17,3 @@ redirect_from: /list.html
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<script type="text/javascript">
-window.onload = function() {
-    $.ajax({
-        url: "http://188.226.227.188/1fbaSXZ_pUMNRAi3UT4qysz5tl6ZDTIRwyTqvIzgEZTI",
-        cache: false
-    }).done(function(html) {
-        $("#mainTable").append(html);
-    })
-    
-
-
-};
-</script>

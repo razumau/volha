@@ -2,14 +2,13 @@
 layout: school
 active: si
 ---
-<table class='table teams' id='mainTable'>
-    <tr>
-        <th>#</th>
-        <th>команда</th>
-        <th>сумма</th>
-    </tr>
-
-    </tbody>
+<table class="table teams" id="mainTable">
+<tbody><tr>
+<th>#</th>
+<th>команда</th>
+<th>сумма</th>
+</tr>
+<tr><td>1</td><td>Фрегат «Ирландия»</td><td>890</td></tr><tr><td>2</td><td>Игугундер</td><td>610</td></tr><tr><td>3</td><td>Че Гевера</td><td>540</td></tr><tr><td>4</td><td>Хорниндальсватнет</td><td>480</td></tr><tr><td>5</td><td>Золотое сечение</td><td>470</td></tr><tr><td>6</td><td>Alpen Gold</td><td>470</td></tr><tr><td>7</td><td>Солянка (ю)</td><td>450</td></tr><tr><td>8</td><td>Магний (ю)</td><td>440</td></tr><tr><td>9</td><td>Солярис</td><td>430</td></tr><tr><td>10</td><td>Те ребята</td><td>410</td></tr><tr><td>11</td><td>Me Gusta (ю)</td><td>400</td></tr><tr><td>12</td><td>Ту-15</td><td>400</td></tr><tr><td>13</td><td>Генеральная упорка</td><td>400</td></tr><tr><td>14</td><td>Смех без причины</td><td>370</td></tr><tr><td>15</td><td>Beatlam (ю)</td><td>340</td></tr><tr><td>16</td><td>Роковые яйца</td><td>340</td></tr><tr><td>17</td><td>Пегасы</td><td>320</td></tr><tr><td>18</td><td>Виртуале (ю)</td><td>260</td></tr><tr><td>19</td><td>НеЗя</td><td>240</td></tr><tr><td>20</td><td>Brainstorm</td><td>240</td></tr><tr><td>21</td><td>Ржавый и компания (ю)</td><td>190</td></tr><tr><td>22</td><td>Точка by</td><td>190</td></tr><tr><td>23</td><td>Шредер</td><td>160</td></tr><tr><td>24</td><td>Если что, это не мы</td><td>160</td></tr><tr><td>25</td><td>Феечки</td><td>120</td></tr><tr><td>26</td><td>Natus Vincere (ю)</td><td>100</td></tr><tr><td>27</td><td>Растафари</td><td>100</td></tr><tr><td>28</td><td>Нестандарты (ю)</td><td>100</td></tr><tr><td>29</td><td>Углекислый глаз (ю)</td><td>80</td></tr></tbody>
 </table>
 
 </div>
@@ -17,16 +16,3 @@ active: si
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<script type="text/javascript">
-window.onload = function() {
-    $.ajax({
-        url: "http://188.226.227.188/19XZhJjgbKue4HYan7LGVrCd7l98tvE9EID3PrN98wuk",
-        cache: false
-    }).done(function(html) {
-        $("#mainTable").append(html);
-    })
-    
-
-
-};
-</script>

@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кубок княгини Ольги</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="http://use.typekit.net/gey4twz.js"></script>
     <script>
@@ -46,16 +46,16 @@
             {% else %}
                 <li>
             {% endif %}
-            <a href="./index.html">объявление</a>
+            <a href="./index.html">расписание</a>
 
-            
+
             {% if page.active == "list" %}
                 <li class="active">
             {% else %}
                 <li>
             {% endif %}
-            <a href="./list.html">команды</a>
-            <!--
+            <a href="./studentlist.html">команды</a>
+
             {% if page.active == "chgk" %}
                 <li class="active">
             {% else %}
@@ -84,14 +84,6 @@
             {% endif %}       
             <a href="./map.html">карта</a>
 
-            {% if page.active == "regulations" %} 
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}       
-            <a href="./regulations.html">регламент</a>
-            
-
             {% if page.active == "hotels" %} 
                 <li class="active">
             {% else %}
@@ -99,25 +91,29 @@
             {% endif %}       
             <a href="./hotels.html">гостиницы</a>
 
-
+            {% if page.active == "regulations" %} 
+                <li class="active">
+            {% else %}
+                <li>
+            {% endif %}       
+            <a href="./regulations.html">регламент</a>
 
             {% if page.active == "editors" %} 
                 <li class="active">
             {% else %}
                 <li>
             {% endif %}       
-            <a href="./editors.html">редакторы</a>
+            <a href="./editors15.html">редакторы</a>
 
-            <li><a href="https://twitter.com/volhacup">твиттер <i class="fa fa-twitter"></i></a>
-            -->
-
-            <li><a href="mailto:volha.by2014@gmail.com">заявиться <i class="fa fa-envelope"></i></a>
             
-            <li>
-            <a href="./school">школьный</a>
+            
+            <li><a href="https://twitter.com/volhacup">твиттер <i class="fa fa-twitter"></i></a>
 
             <li>
-            <a href="./students">студенческий</a>
+            <a href="../school">школьный</a>
+
+            <li>
+            <a href="..">взрослый</a>
 
             </ul>
 

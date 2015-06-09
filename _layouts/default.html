@@ -77,12 +77,7 @@
             {% endif %}
             <a href="./eq.html">результаты <span class="caps">эк</span></a>
             
-            {% if page.active == "map" %} 
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}       
-            <a href="./map.html">карта</a>
+          
 
             {% if page.active == "regulations" %} 
                 <li class="active">
@@ -90,7 +85,7 @@
                 <li>
             {% endif %}       
             <a href="./regulations.html">регламент</a>
-            
+            -->
 
             {% if page.active == "hotels" %} 
                 <li class="active">
@@ -98,8 +93,13 @@
                 <li>
             {% endif %}       
             <a href="./hotels.html">гостиницы</a>
-            -->
-
+            
+            {% if page.active == "map" %} 
+                <li class="active">
+            {% else %}
+                <li>
+            {% endif %}       
+            <a href="./map.html">карта</a>
 
             {% if page.active == "editors" %} 
                 <li class="active">
@@ -108,9 +108,9 @@
             {% endif %}       
             <a href="./editors.html">редакторы</a>
         
-            <!--
+            
             <li><a href="https://twitter.com/volhacup">твиттер <i class="fa fa-twitter"></i></a>
-            -->
+            
 
             <li><a href="mailto:volha.by2014@gmail.com">заявиться <i class="fa fa-envelope"></i></a>
 

@@ -215,6 +215,23 @@ h3.regulations {
     font-size: 0.84em;
     text-transform: uppercase;
 }
+
+a.dashed-link {
+    text-decoration: none;
+    border-bottom: 1px dotted #000;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#night-show {
+    display: none;
+}
+
 header ul {
     padding: 0;
     margin: 0;

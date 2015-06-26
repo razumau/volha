@@ -1,0 +1,33 @@
+---
+layout: default 
+active: chgk 
+---
+<table class='table teams' id='mainTable'>
+    <tbody>
+        <tr>
+            <th>#</th>
+            <th>команда</th>
+            <th>сумма</th>
+            <th>I</th>
+            <th>II</th>
+            <th>III</th>
+            <th>IV</th>
+            <th>V</th>
+    </tbody>
+</table>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+window.onload = function() {
+    $.ajax({
+        url: "https://results.razumau.net/1FLf01X-2YTnV9EWdewOKrZ5E2ztdmvy2b8MvbcxXePA",
+        cache: false
+    }).done(function(html) {
+        $("#mainTable").append(html);
+    })
+    
+
+
+};
+</script>

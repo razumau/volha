@@ -155,6 +155,19 @@ a:hover {
 .teams tr:nth-child(3n+2) td {
     border-top: 1px solid #bbb !important;
 }
+
+@media only screen and (max-width: 400px) {
+    .results {
+        font-size: 14px !important;
+    }
+
+    .results>tbody>tr>th {
+        padding-right: 0px;
+    }
+}
+
+
+
 #vitTable tr:nth-child(5) td {
     border-top: none !important;
 }

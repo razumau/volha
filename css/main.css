@@ -161,7 +161,7 @@ a:hover {
         font-size: 14px !important;
     }
 
-    .results>tbody>tr>th {
+    .results>tbody>tr>th, .results>tbody>tr>td {
         padding-right: 0px;
     }
 }

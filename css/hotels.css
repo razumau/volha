@@ -109,8 +109,10 @@ a:hover {
 }
 
 a.dashed-link, span {
-    text-decoration: none;
-    border-bottom: 1px dotted #000;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    /*border-bottom: 1px dotted #000;*/
+    line-height: 1;
     cursor: pointer;
     -webkit-touch-callout: none;
     -webkit-user-select: none;

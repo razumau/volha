@@ -21,38 +21,10 @@ h3 {
     background-color: #f0f0f0;
     color: #101010;
 }
-.nav {
-	z-index: 10;
-}
-.nav-pills > li > a {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-}
-.nav-pills > li {
-    background-color: #80deea !important;
-}
 
-.nav > li > a:hover {
-    background-color: #b2ebf2;
-}
-
-
-.nav-stacked>li+li {
-	margin-top: 0px;
-}
-
-.nav-pills > li.active {
-    border-right: 0 !important;
-}
-.nav-pills > li.active > a {
-    background-color: #0097a7;
-}
-.nav-pills > li.active > a:hover {
-    background-color: #00acc1;
-}
 a {
     color: #006064;
+    text-decoration: underline;
 }
 a:hover {
     color: #00bcd4;
@@ -109,9 +81,6 @@ a:hover {
     }
 }
 
-.nav li a {
-    padding-left: 7%;
-}
 .hotels .figure {
     font-weight: 700;
 }
@@ -125,108 +94,21 @@ a:hover {
     width: 70px !important;
     margin-top: 1px;
 }
-.program {
-    margin-left: 1em;
-    width: 90% !important;
-}
-.teams {
-    font-size: 20px !important;
-    width: 100% !important;
-}
-#waitHeader, #vitHeader, #wcHeader {
-    visibility: hidden;
-}
-#waitTable, #vitTable, #wcTable {
-    visibility: hidden;
-}
-#vitTable td:nth-child(1), #wcTable td:nth-child(1) {
-    width: 45px !important;
-}
-.program td {
-    height: 70px;
-    border-top: none !important;
-}
-.teams td, .teams th {
-    border-top: none !important;
-}
-.teams tr:nth-child(3n+2) td {
-    border-top: 1px solid #bbb !important;
-}
-
-@media only screen and (max-width: 400px) {
-    .results {
-        font-size: 14px !important;
-    }
-
-    .results>tbody>tr>th, .results>tbody>tr>td {
-        padding-right: 0px;
-    }
-}
 
 
-
-#vitTable tr:nth-child(5) td {
-    border-top: none !important;
-}
-p.desc {
-    font-style: italic;
-    font-size: 85%;
-}
 .main {
     padding-top: 5px;
-    /*padding-left: 20px;*/
     padding-bottom: 2%;
     z-index: 10;
 }
-ul.nav {
-    padding-right: 0px;
-}
-ul.dash {
-    list-style: none;
-    margin-left: 1em;
-}
-ul.dash li:before {
-    content: "— ";
-    position: relative;
-}
-ul.dash li {
-    text-indent: -2em;
-}
-/*ol {
-    font-family: 'Alegreya Sans', sans-serif;
-}*/
-ol li p {
-    font-family: 'Lato', sans-serif;
-    padding-left: 1em;
-    text-indent: -1em;
-    padding-top: 0.25em;
-}
-h3.regulations {
-    padding-top: 1.5em;
-}
-.formula {
-    text-align: center;
-}
-.teams {
-    font-size: 14px;
-    width: 95%;
-}
-.teams .figure {
-    font-size: 22px;
-}
-.eq {
-    font-weight: bold;
-}
-.row {
-    background-color: #aaaaaa;
-}
+
 .caps {
     letter-spacing: 1.5px;
     font-size: 0.84em;
     text-transform: uppercase;
 }
 
-a.dashed-link {
+a.dashed-link, span {
     text-decoration: none;
     border-bottom: 1px dotted #000;
     cursor: pointer;
@@ -246,6 +128,7 @@ header ul {
     padding: 0;
     margin: 0;
 }
+
 iframe {
     border: 0;
     margin: 15px auto;

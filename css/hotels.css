@@ -11,14 +11,19 @@ body {
     
 }
 
-button {
-    margin-top: 0px;
-    margin-left: 0px;
+label {
+    letter-spacing: 1.7px;
+    font-size: 0.6em;
+    text-transform: uppercase;
 }
 
-button .active {
-    background-color: #006064 !important;
-}
+/*
+#0097a7
+
+#00838f
+
+#00acc1
+*/
 
 h3 {
     font-size: 20px;

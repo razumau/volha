@@ -10,6 +10,16 @@ body {
     background-color: #aaaaaa;
     
 }
+
+button {
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+button .active {
+    background-color: #006064 !important;
+}
+
 h3 {
     font-size: 20px;
     font-weight: 700;
@@ -65,11 +75,6 @@ a:hover {
     -moz-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
     box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
-@media only screen and (min-width: 991px) {
-    .main {
-        min-height: 500px;
-    }
-}
 
 @media only screen and (max-width: 600px) {
     .container-fluid {
@@ -97,7 +102,7 @@ a:hover {
 
 
 .main {
-    padding-top: 5px;
+    padding-top: -55px;
     padding-bottom: 2%;
     z-index: 10;
 }
@@ -108,11 +113,11 @@ a:hover {
     text-transform: uppercase;
 }
 
-a.dashed-link, span {
-    text-decoration-line: underline;
-    text-decoration-style: dotted;
-    /*border-bottom: 1px dotted #000;*/
-    line-height: 1;
+
+/*span {
+    text-decoration: none;
+    border-bottom: 1px dotted #000;
+    /*line-height: 1;*/
     cursor: pointer;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -120,7 +125,7 @@ a.dashed-link, span {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
+}*/
 
 #night-show {
     display: none;

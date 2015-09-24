@@ -2,8 +2,10 @@
 
 	var byrToUsd, eurToByr, rubToByr;
 
+
+
 	$.ajax({
-		url: 'https://openexchangerates.org/api/latest.json?app_id=ea8fd77aebdd496f9a815471963bd01a',
+		url: 'https://1openexchangerates.org/api/latest.json?app_id=ea8fd77aebdd496f9a815471963bd01a',
 		type: 'GET'
 	})
 	.done(function(data) {
@@ -16,7 +18,7 @@
 		rubToByr = 270;
 	})
 	.always(function() {
-		var $spans = $('[rel~=tooltip]'),
+		var $spans = $('span'),
 			$span,
 			price,
 			russianRubles,
@@ -29,8 +31,15 @@
 			euros = (price / eurToByr).toFixed(1);
 			russianRubles = (price / rubToByr).toFixed(0);
 
-			$span.attr("title", euros + ' <i class="fa fa-eur"></i><br/>' +
-				russianRubles + ' <i class="fa fa-rub"></i>');
+			$span.data('byr', price)
+				.data('eur', euros)
+				.data('rub', russianRubles)
+
+
+			$span.text(euros);
+
+			/*$span.attr("title", euros + ' <i class="fa fa-eur"></i><br/>' +
+				russianRubles + ' <i class="fa fa-rub"></i>');*/
 		}
 	});
 

@@ -1,4 +1,5 @@
-(function($) {
+'use strict';
+(function($, localStorage) {
 
 	var byrToUsd, eurToByr, rubToByr, uahToByr;
 
@@ -12,13 +13,13 @@
 		eurToByr = rates.BYR / rates.EUR;
 		rubToByr = rates.BYR / rates.RUB;
 		uahToByr = rates.BYR / rates.UAH;
-	}
+	};
 
 	var setDefaultRates = function() {
 		eurToByr = 20000;
 		rubToByr = 270;
 		uahToByr = 850;
-	}
+	};
 
 	var convertPrices = function() {
 		var $spans = $('span'),
@@ -41,8 +42,13 @@
 				.data('rub', russianRubles)
 				.data('uah', hryvnias);
 
+		}
 
-			//$span.text(euros);
+		if (localStorage) {
+			var currency = localStorage.getItem('currency');
+			if (currency !== 'byr') {
+				$('#' + currency).trigger('click');
+			}
 		}
 	};
 
@@ -56,17 +62,21 @@
 			$span.text($span.data(currency));
 
 		} 
-	}
+
+		if (localStorage) {
+			localStorage.setItem('currency', currency);
+		}
+	};
 
 	$("#buttons").on('click', 'label', function() {
 		switchTo($(this).text().trim());
-	})
+	});
 
 	$.ajax(oerParams)
 		.done(setCorrectRates)
 		.fail(setDefaultRates)
 		.always(convertPrices);
 
-})(jQuery);
+})(jQuery, window.localStorage);
 
 

@@ -3,6 +3,8 @@
 
 	var byrToUsd, eurToByr, rubToByr, uahToByr;
 
+	var toByr = {};
+
 	var oerParams = {
 		url: 'https://openexchangerates.org/api/latest.json?app_id=ea8fd77aebdd496f9a815471963bd01a',
 		type: 'GET'
@@ -10,15 +12,19 @@
 
 	var setCorrectRates = function(data) {
 		var rates = data.rates;
-		eurToByr = rates.BYR / rates.EUR;
-		rubToByr = rates.BYR / rates.RUB;
-		uahToByr = rates.BYR / rates.UAH;
+		toByr.eur = rates.BYR / rates.EUR;
+		toByr.rub = rates.BYR / rates.RUB;
+		toByr.uah = rates.BYR / rates.UAH;
+		toByr.amd = rates.BYR / rates.AMD;
+		toByr.azn = rates.BYR / rates.AZN;
 	};
 
 	var setDefaultRates = function() {
-		eurToByr = 20000;
-		rubToByr = 270;
-		uahToByr = 850;
+		toByr.eur = 20000;
+		toByr.rub = 270;
+		toByr.uah = 850;
+		toByr.amd = 40;
+		toByr.azn = 17000;
 	};
 
 	var convertPrices = function() {
@@ -27,20 +33,26 @@
 			price,
 			russianRubles,
 			euros,
-			hryvnias;
+			hryvnias,
+			drams,
+			manats;
 
 		for (var i = 0, len = $spans.length; i < len; i++) {
 			$span = $($spans[i]);
 			price = parseInt($span.text().replace(' ', ''), 10);
 
-			euros = (price / eurToByr).toFixed(1);
-			russianRubles = (price / rubToByr).toFixed(0);
-			hryvnias = (price / uahToByr).toFixed(0);
+			euros = (price / toByr.eur).toFixed(1);
+			russianRubles = (price / toByr.rub).toFixed(0);
+			hryvnias = (price / toByr.uah).toFixed(0);
+			drams = (price / toByr.amd).toFixed(0);
+			manats = (price / toByr.azn).toFixed(1);
 
 			$span.data('byr', price)
 				.data('eur', euros)
 				.data('rub', russianRubles)
-				.data('uah', hryvnias);
+				.data('uah', hryvnias)
+				.data('amd', drams)
+				.data('azn', manats);
 
 		}
 

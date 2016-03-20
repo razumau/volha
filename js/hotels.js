@@ -20,11 +20,11 @@
 	};
 
 	var setDefaultRates = function() {
-		toByr.eur = 20000;
-		toByr.rub = 270;
-		toByr.uah = 850;
-		toByr.amd = 40;
-		toByr.azn = 17000;
+		toByr.eur = 22700;
+		toByr.rub = 300;
+		toByr.uah = 730;
+		toByr.amd = 42;
+		toByr.azn = 12500;
 	};
 
 	var convertPrices = function() {
@@ -70,10 +70,12 @@
 
 		for (var i = 0, len = $spans.length; i < len; i++) {
 			$span = $($spans[i]);
-
-			$span.text($span.data(currency));
-
-		} 
+            var text = $span.data(currency).toString();
+            if (text.length >= 5) {
+                text = text.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
+            }
+			$span.text(text);
+		}
 
 		if (localStorage) {
 			localStorage.setItem('currency', currency);
@@ -82,6 +84,8 @@
 
 	$("#buttons").on('click', 'label', function() {
 		switchTo($(this).text().trim());
+		$("#buttons > label").removeClass('active');
+		$(this).addClass('active');
 	});
 
 	$.ajax(oerParams)

@@ -40,6 +40,9 @@ h3 {
     background-color: #b2ebf2;
 }
 
+p > a {
+    text-decoration: underline;
+}
 
 .nav-stacked>li+li {
 	margin-top: 0px;
@@ -115,9 +118,6 @@ a:hover {
 .nav li a {
     padding-left: 7%;
 }
-.hotels .figure {
-    font-weight: 700;
-}
 .figure {
     font-family: 'Alegreya Sans', sans-serif;
 }
@@ -162,11 +162,9 @@ a:hover {
     }
 
     .results>tbody>tr>th, .results>tbody>tr>td {
-        padding-right: 0px;
+        padding-right: 0;
     }
 }
-
-
 
 #vitTable tr:nth-child(5) td {
     border-top: none !important;
@@ -177,12 +175,11 @@ p.desc {
 }
 .main {
     padding-top: 5px;
-    /*padding-left: 20px;*/
     padding-bottom: 2%;
     z-index: 10;
 }
 ul.nav {
-    padding-right: 0px;
+    padding-right: 0;
 }
 ul.dash {
     list-style: none;
@@ -195,9 +192,7 @@ ul.dash li:before {
 ul.dash li {
     text-indent: -2em;
 }
-/*ol {
-    font-family: 'Alegreya Sans', sans-serif;
-}*/
+
 ol li p {
     font-family: 'Lato', sans-serif;
     padding-left: 1em;
@@ -235,7 +230,6 @@ a.dashed-link {
     cursor: pointer;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
-    -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -260,54 +254,7 @@ img {
     margin-left: 10%;
     width: 80%;
 }
-#tooltip {
-    text-align: center;
-    color: #fff;
-    background: #006064;
-    position: absolute;
-    z-index: 50;
-    padding: 15px;
-    -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    -moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-
-}
-/*for tooltip.js*/
-
-#tooltip .fa {
-    font-size: 18px;
-}
 
 .fa {
     font-size: 16px !important;
-}
-#tooltip:after
-/* triangle decoration */
-
-{
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #006064;
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    margin-left: -10px;
-}
-#tooltip.top:after {
-    border-top-color: transparent;
-    border-bottom: 10px solid #111;
-    top: -20px;
-    bottom: auto;
-}
-#tooltip.left:after {
-    left: 10px;
-    margin: 0;
-}
-#tooltip.right:after {
-    right: 10px;
-    left: auto;
-    margin: 0;
 }

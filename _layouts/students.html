@@ -6,41 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кубок княгини Ольги</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../css/bootstrap-new.css">
+    {% if page.active == 'hotels' %}
+    <link rel="stylesheet" href="../css/hotels.css">
+    {% endif %}
     <link rel="stylesheet" href="../css/main.css">
+
+
+
+    <!--<link rel="stylesheet" href="https://volha.by/css/hotels-bootstrap.min.css">-->
+
+
+
+
+    <!--<link rel="stylesheet" href="https://volha.by/css/hotels-bootstrap.min.css">-->
+
+    <!--<link rel="stylesheet" href="../css/main.css">-->
+
+
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://use.typekit.net/gey4twz.js"></script>
     <script>
-    try {
-        Typekit.load();
-    } catch (e) {}
+        try {
+            Typekit.load();
+        } catch (e) {
+        }
     </script>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-3 title z-depth-4">
-                студенческий кубок княгини Ольги</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-3 title z-depth-4">
+            студенческий кубок княгини Ольги
         </div>
-        <div class="row">
+    </div>
+    <div class="row">
 
-            <ul class="col-md-2 col-md-offset-3 nav nav-pills nav-stacked z-depth-4">
+        <ul class="col-md-2 col-md-offset-3 nav nav-pills nav-stacked z-depth-4">
 
             {% if page.active == "index" %}
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}
-            <a href="index.html">расписание</a>
+            <li class="active">
+                {% else %}
+            <li>
+                {% endif %}
+                <a href="index.html">расписание</a>
 
 
-            {% if page.active == "list" %}
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}
-            <a href="list.html">команды</a>
+                {% if page.active == "list" %}
+            <li class="active">
+                {% else %}
+            <li>
+                {% endif %}
+                <a href="list.html">команды</a>
 
                 <!-- {% if page.active == "chgk" %}
                     <li class="active">
@@ -62,61 +81,80 @@
                     <li>
                 {% endif %}
                 <a href="./eq.html">результаты <span class="caps">эк</span></a> -->
-            
-            {% if page.active == "map" %} 
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}       
-            <a href="map.html">карта</a>
 
-            <!-- {% if page.active == "hotels" %} 
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}       
-            <a href="hotels.html">гостиницы</a> -->
+                {% if page.active == "map" %}
+            <li class="active">
+                {% else %}
+            <li>
+                {% endif %}
+                <a href="map.html">карта</a>
 
-            <!-- {% if page.active == "regulations" %} 
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}       
-            <a href="regulations.html">регламент</a> -->
+                {% if page.active == "hotels" %}
+            <li class="active">
+                {% else %}
+            <li>
+                {% endif %}
+                <a href="hotels.html">гостиницы</a>
 
-            {% if page.active == "editors" %} 
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}       
-            <a href="editors.html">редакторы</a>
+                <!-- {% if page.active == "regulations" %}
+                    <li class="active">
+                {% else %}
+                    <li>
+                {% endif %}
+                <a href="regulations.html">регламент</a> -->
 
-            
-            
+                {% if page.active == "editors" %}
+            <li class="active">
+                {% else %}
+            <li>
+                {% endif %}
+                <a href="editors.html">редакторы</a>
+
+
             <li><a href="https://twitter.com/volhacup">твиттер <i class="fa fa-twitter"></i></a>
 
             <li>
-            <a href="../school">школьный</a>
+                <a href="../school">школьный</a>
 
             <li>
-            <a href="..">взрослый</a>
+                <a href="..">взрослый</a>
 
-            </ul>
+        </ul>
 
-            <div class="col-md-6 main z-depth-4">
+        <div class="col-md-6 main z-depth-4">
+            {% if page.active == 'hotels' %}
+                <div id="buttons" class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary active" id="byr">
+                        <input type="radio" name="options" id="byr" autocomplete="off" checked>byr</label>
+                    <label class="btn btn-primary" id="eur">
+                        <input type="radio" name="options" id="eur" autocomplete="off">eur</label>
+                    <label class="btn btn-primary" id="rub">
+                        <input type="radio" name="options" id="rub" autocomplete="off">rub</label>
+                    <label class="btn btn-primary" id="uah">
+                        <input type="radio" name="options" id="uah" autocomplete="off">uah</label>
+                </div>
+
+            {% endif %}
 
 
-                {{ content }}
+            {{ content }}
 
 
-            </div>
-            
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-            <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        </div>
 
-            {% if page.active == "hotels" %} 
-            <script src='https://volha.by/js/tooltip.js'></script>
-             {% endif %}  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <!--<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
+
+
+        <script src='https://volha.by/js/smart-underline.js'></script>
+        <script>SmartUnderline.init({
+            "location": ""
+        })
+        </script>
+
+        {% if page.active == "hotels" %}
+        <script src='../js/hotels.js'></script>
+        {% endif %}
 </body>
 
 </html>

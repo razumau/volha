@@ -10,16 +10,12 @@ redirect_from: "/list15.html"
 </div>
 </div>
 <script type="text/javascript">
-    (function ($) {
-        window.onload = function () {
-            $.ajax({
-                url: "https://results.razumau.net/table/10qhN7r9cudWaZ91yTWf36OVUd-qjy9mEA6R-JYtmKYw",
-                cache: false
-            }).done(function (html) {
-                $("#mainTable").append(html);
-            })
-
-        };
-    })(jQuery)
-
+    window.onload = function () {
+        $.ajax({
+            url: "https://results.razumau.net/table/10qhN7r9cudWaZ91yTWf36OVUd-qjy9mEA6R-JYtmKYw",
+            cache: false
+        }).done(function (html) {
+            $("#mainTable").append(html);
+        })
+    }
 </script>

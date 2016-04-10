@@ -3,25 +3,120 @@ layout: school
 active: si
 ---
 <table class="table teams" id="mainTable">
-<tbody><tr>
-<th>#</th>
-<th>команда</th>
-<th>сумма</th>
-</tr>
-</tbody>
+    <tbody>
+    <tr>
+        <th>#</th>
+        <th>команда</th>
+        <th>сумма</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Гришкин парк</td>
+        <td>900</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Карл-Маркс-Штадт</td>
+        <td>650</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Город категории Б</td>
+        <td>630</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Хорниндальсватнет</td>
+        <td>550</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Шредер</td>
+        <td>480</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Котики апокалипсиса</td>
+        <td>380</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Ту-15</td>
+        <td>320</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>Мы не знаем</td>
+        <td>320</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>Феечки</td>
+        <td>290</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>42 градуса по Фаренгейту</td>
+        <td>260</td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>Изи Кафка</td>
+        <td>260</td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>Пегасы</td>
+        <td>230</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>Me gusta</td>
+        <td>190</td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td>Beatlam</td>
+        <td>130</td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>Carpe diem</td>
+        <td>130</td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>Магний</td>
+        <td>120</td>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td>6 Друзей ВАНича</td>
+        <td>120</td>
+    </tr>
+    <tr>
+        <td>18</td>
+        <td>Вздорная солянка</td>
+        <td>70</td>
+    </tr>
+    <tr>
+        <td>19</td>
+        <td>Тинейджеры</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>MaGiC TEAM</td>
+        <td>-10</td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>Виртуале</td>
+        <td>-80</td>
+    </tr>
+    </tbody>
 </table>
 
 </div>
 </div>
 </div>
-
-<script type="text/javascript">
-    window.onload = function () {
-        $.ajax({
-            url: "https://results.razumau.net:8443/table/10mEXIm5KhuILO_RyXb7M3bu8NLqiUz87Ox0lEyHerV4",
-            cache: false
-        }).done(function (html) {
-            $("#mainTable").append(html);
-        })
-    }
-</script>

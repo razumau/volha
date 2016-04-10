@@ -2,7 +2,8 @@
 layout: students
 active: si
 ---
-<h3><a target="_blank" href="https://docs.google.com/spreadsheets/d/1_wAAip003M63MLBl70SREqmgHQlBcDu82hfqUkjfIc0/edit#gid=0">очная
+<h3><a target="_blank"
+       href="https://docs.google.com/spreadsheets/d/1_wAAip003M63MLBl70SREqmgHQlBcDu82hfqUkjfIc0/edit#gid=0">очная
     часть</a></h3><br>
 <h3>результаты отбора</h3>
 <table class="table teams" id="mainTable">
@@ -12,20 +13,174 @@ active: si
         <th>игрок</th>
         <th>сумма</th>
     </tr>
+    <tr>
+        <td>1</td>
+        <td>Иван Зайков</td>
+        <td>410</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Илья Колодник</td>
+        <td>400</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Сергей Генералов</td>
+        <td>350</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Фёдор Старовойтов</td>
+        <td>340</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Андрей Зуев</td>
+        <td>340</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Виктор Реут</td>
+        <td>330</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Яна Тарасевич</td>
+        <td>310</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>Христина Чернушевич</td>
+        <td>300</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>Антон Ушкалов</td>
+        <td>290</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>Дмитрий Потуремский</td>
+        <td>280</td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>Виктория Волкова</td>
+        <td>280</td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>Елизавета Лысенко</td>
+        <td>270</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>Сергей Чигак</td>
+        <td>260</td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td>Александр Карницкий</td>
+        <td>230</td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>Денис Валянский</td>
+        <td>220</td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>Мария Журавлёва</td>
+        <td>220</td>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td>Антон Иоков</td>
+        <td>210</td>
+    </tr>
+    <tr>
+        <td>18</td>
+        <td>Алексей Бабак</td>
+        <td>200</td>
+    </tr>
+    <tr>
+        <td>19</td>
+        <td>Ренат Рустамов</td>
+        <td>190</td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>Анастасия Логош</td>
+        <td>170</td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>Роман Чернышёв</td>
+        <td>170</td>
+    </tr>
+    <tr>
+        <td>22</td>
+        <td>Любовь Аладьева</td>
+        <td>160</td>
+    </tr>
+    <tr>
+        <td>23</td>
+        <td>Евгений Дегтярёв</td>
+        <td>160</td>
+    </tr>
+    <tr>
+        <td>24</td>
+        <td>Владислав Мацкевич</td>
+        <td>150</td>
+    </tr>
+    <tr>
+        <td>25</td>
+        <td>Антон Воронько</td>
+        <td>150</td>
+    </tr>
+    <tr>
+        <td>26</td>
+        <td>Илья Борода</td>
+        <td>150</td>
+    </tr>
+    <tr>
+        <td>27</td>
+        <td>Юрий Маханько</td>
+        <td>140</td>
+    </tr>
+    <tr>
+        <td>28</td>
+        <td>Антон Посредников</td>
+        <td>140</td>
+    </tr>
+    <tr>
+        <td>29</td>
+        <td>Павел Чёрный</td>
+        <td>110</td>
+    </tr>
+    <tr>
+        <td>30</td>
+        <td>Александр Койпаш</td>
+        <td>80</td>
+    </tr>
+    <tr>
+        <td>31</td>
+        <td>Михаил Лескович</td>
+        <td>80</td>
+    </tr>
+    <tr>
+        <td>32</td>
+        <td>Алексей Бойко</td>
+        <td>60</td>
+    </tr>
+    <tr>
+        <td>33</td>
+        <td>Кирилл Климович</td>
+        <td>-100</td>
+    </tr>
     </tbody>
 </table>
 
 </div>
 </div>
 </div>
-
-<script type="text/javascript">
-    window.onload = function () {
-        $.ajax({
-            url: "https://results.razumau.net:8443/table/1W-q-LVC1r9XCkba4k5CA7eYAaodXYjWDgE0qKq2yiwY",
-            cache: false
-        }).done(function (html) {
-            $("#mainTable").append(html);
-        })
-    }
-</script>

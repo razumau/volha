@@ -43,36 +43,36 @@
             <a href="./list.html">команды</a>
             -->
             
-            {% if page.active == "chgk" %}
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}
-            <a href="./chgk.html"><span class="caps">чгк</span></a>
+            <!--{% if page.active == "chgk" %}-->
+                <!--<li class="active">-->
+            <!--{% else %}-->
+                <!--<li>-->
+            <!--{% endif %}-->
+            <!--<a href="./chgk.html"><span class="caps">чгк</span></a>-->
 
-            {% if page.active == "si" %}
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}
-            <a target="_blank" href="https://docs.google.com/spreadsheets/d/1BjpuigPgLCwkKkk2XJsbKqiFzFr0l1OkZuykqeyWxws/"><span class="caps">чрб</span> по <span class="caps">си</span> <i class="fa fa-external-link-square"></i></a>
+            <!--{% if page.active == "si" %}-->
+                <!--<li class="active">-->
+            <!--{% else %}-->
+                <!--<li>-->
+            <!--{% endif %}-->
+            <!--<a target="_blank" href="https://docs.google.com/spreadsheets/d/1BjpuigPgLCwkKkk2XJsbKqiFzFr0l1OkZuykqeyWxws/"><span class="caps">чрб</span> по <span class="caps">си</span> <i class="fa fa-external-link-square"></i></a>-->
 
-            
-            {% if page.active == "eq" %}
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}
-            <a target="_blank" href="https://docs.google.com/spreadsheets/d/1gzwULtpPld0GXOIkC1EOsfVseJ5VG5xOYG2CHxIkxT0"><span class="caps">эк</span> <i class="fa fa-external-link-square"></i></a>
-        
-          
+            <!---->
+            <!--{% if page.active == "eq" %}-->
+                <!--<li class="active">-->
+            <!--{% else %}-->
+                <!--<li>-->
+            <!--{% endif %}-->
+            <!--<a target="_blank" href="https://docs.google.com/spreadsheets/d/1gzwULtpPld0GXOIkC1EOsfVseJ5VG5xOYG2CHxIkxT0"><span class="caps">эк</span> <i class="fa fa-external-link-square"></i></a>-->
+        <!---->
+          <!---->
 
-            {% if page.active == "regulations" %} 
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}       
-            <a href="./regulations.html">регламент</a>
+            <!--{% if page.active == "regulations" %} -->
+                <!--<li class="active">-->
+            <!--{% else %}-->
+                <!--<li>-->
+            <!--{% endif %}       -->
+            <!--<a href="./regulations.html">регламент</a>-->
             
 
             {% if page.active == "hotels" %} 
@@ -89,12 +89,12 @@
             {% endif %}       
             <a href="./map.html">карта</a>
 
-            {% if page.active == "editors" %} 
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}       
-            <a href="./editors.html">редакторы</a>
+            <!--{% if page.active == "editors" %} -->
+                <!--<li class="active">-->
+            <!--{% else %}-->
+                <!--<li>-->
+            <!--{% endif %}       -->
+            <!--<a href="./editors.html">редакторы</a>-->
         
             
             <li><a href="https://twitter.com/volhacup">твиттер <i class="fa fa-twitter"></i></a>
@@ -119,8 +119,17 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
             <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
-            {% if page.active == "hotels" %} 
-                 <script src='https://volha.by/js/tooltip.js'></script>
+            {% if page.active == "hotels" %}
+            <div id="buttons" class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary active" id="byr">
+                    <input type="radio" name="options" id="byr" autocomplete="off" checked>byr</label>
+                <label class="btn btn-primary" id="eur">
+                    <input type="radio" name="options" id="eur" autocomplete="off">eur</label>
+                <label class="btn btn-primary" id="rub">
+                    <input type="radio" name="options" id="rub" autocomplete="off">rub</label>
+                <label class="btn btn-primary" id="uah">
+                    <input type="radio" name="options" id="uah" autocomplete="off">uah</label>
+            </div>
             {% endif %}  
 
             {% if page.active == "index" %} 

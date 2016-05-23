@@ -3,7 +3,7 @@ layout: default
 active: list 
 ---
 
-<p class="desc">команды, выделенные курсивом, ещё не <a href="https://docs.google.com/forms/d/1SXrE2BORP_wAg3J2Mrzv6MUMwg7QxZjIXIxcvlQqSOk/viewform">подтвердили своё участие</a></p>
+<!--<p class="desc">команды, выделенные курсивом, ещё не <a href="https://docs.google.com/forms/d/1SXrE2BORP_wAg3J2Mrzv6MUMwg7QxZjIXIxcvlQqSOk/viewform">подтвердили своё участие</a></p>-->
 
 <table class="table teams" id="mainTable">
 <tbody><tr>
@@ -21,7 +21,7 @@ active: list
 <script type="text/javascript">
 window.onload = function() {
     $.ajax({
-        url: "https://results.razumau.net/1cdG4pTZjv5cunthzsKfSHj9NsIOAwJVNRA4MWuEjIIw",
+        url: "http://results.razumau.net/table/1JzYgfT12CyZzHL-pOeAhkZHDl7TZcECDI5L_4t7y29A",
         cache: false
     }).done(function(html) {
         $("#mainTable").append(html);

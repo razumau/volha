@@ -11,7 +11,14 @@
     {% if page.active == 'hotels' %}
     <link rel="stylesheet" href="../css/hotels.css">
     {% endif %}
+
+    {% if page.active == 'chgk' %}
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/replay-table/latest/replay-table.css">
+    {% endif %}
+
     <link rel="stylesheet" href="../css/main.css">
+
+
 
 
     <!--<link rel="stylesheet" href="https://volha.by/css/hotels-bootstrap.min.css">-->
@@ -158,6 +165,10 @@
 
         {% if page.active == "hotels" %}
         <script src='../js/hotels.js'></script>
+        {% endif %}
+
+        {% if page.active == 'chgk' %}
+        <script type="text/javascript" src="//cdn.jsdelivr.net/replay-table/latest/replay-table.min.js"></script>
         {% endif %}
 </body>
 

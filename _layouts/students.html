@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="../css/hotels.css">
     {% endif %}
 
-    {% if page.active == 'chgk' %}
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/replay-table/latest/replay-table.css">
-    {% endif %}
 
     <link rel="stylesheet" href="../css/main.css">
 
@@ -72,12 +69,12 @@
                 </a>
 
 
-                <!--{% if page.active == "chgk" %}-->
-                    <!--<li class="active">-->
-                <!--{% else %}-->
-                    <!--<li>-->
-                <!--{% endif %}-->
-                <!--<a href="chgk.html">результаты <span class="caps">чгк</span></a>-->
+                {% if page.active == "chgk" %}
+                    <li class="active">
+                {% else %}
+                    <li>
+                {% endif %}
+                <a href="chgk.html" target="_new">результаты <span class="caps">чгк</span></a>
 
                 <!--{% if page.active == "si" %}-->
                     <!--<li class="active">-->
@@ -167,9 +164,6 @@
         <script src='../js/hotels.js'></script>
         {% endif %}
 
-        {% if page.active == 'chgk' %}
-        <script type="text/javascript" src="//cdn.jsdelivr.net/replay-table/latest/replay-table.min.js"></script>
-        {% endif %}
 </body>
 
 </html>

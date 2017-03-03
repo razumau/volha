@@ -1,11 +1,19 @@
----
-layout: students
-active: chgk
----
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/replay-table/latest/replay-table.css">
+    <title>СККО — результаты ЧГК</title>
+</head>
+<body>
 <div class="replayTable"
      data-csv="https://s3-eu-west-1.amazonaws.com/volha-results/volha.csv"
-     data-preset="ЧГК">
+     data-extra-columns-number="1"
+     data-preset="ЧГК"
+     style="margin: 10px 0 0 5px;">
 </div>
-</div>
-</div>
-</div>
+<script type="text/javascript" src="//cdn.jsdelivr.net/replay-table/latest/replay-table.min.js"></script>
+</body>
+</html>

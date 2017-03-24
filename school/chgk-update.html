@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/replay-table/latest/replay-table.css">
+    <title>СККО — результаты ЧГК</title>
+</head>
+<body>
+<div class="replayTable"
+     data-csv="https://s3-eu-west-1.amazonaws.com/volha-results/volha-school.csv"
+     data-preset="ЧГК"
+     style="margin-top: 10px; align-items: center; display: flex; justify-content: center; font-family: 'Lato', sans-serif;">
+</div>
+<script type="text/javascript" src="//cdn.jsdelivr.net/replay-table/0.2.4/replay-table.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+    var idleTime = 0;
+    $(document).ready(function () {
+        var idleInterval = setInterval(timerIncrement, 1000);
+        $(this).mousemove(function (e) {
+            idleTime = 0;
+        });
+        $(this).keypress(function (e) {
+            idleTime = 0;
+        });
+    });
+
+    function timerIncrement() {
+        idleTime = idleTime + 1;
+        if (idleTime > 30) {
+            window.location.reload();
+        }
+    }
+</script>
+</body>
+</html>

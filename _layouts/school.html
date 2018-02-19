@@ -35,47 +35,41 @@
             <a href="index.html">расписание</a>
 
 
-            {% if page.active == "list" %}
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}
-            <a href="list.html">команды</a>
 
-            {% if page.active == "map" %}
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}
-                <a href="https://yandex.com/maps/-/C6ETBUIp">карта <i class="fa fa-external-link-square"></i></a>
+            <!--{% if page.active == "map" %}-->
+                <!--<li class="active">-->
+            <!--{% else %}-->
+                <!--<li>-->
+            <!--{% endif %}-->
+                <!--<a href="https://yandex.com/maps/-/C6ETBUIp">карта <i class="fa fa-external-link-square"></i></a>-->
 
                 {% if page.active == "chgk" %}
                     <li class="active">
                 {% else %}
                     <li>
                 {% endif %}
-                <a href="../school/chgk.html" target="_blank">результаты <span class="caps">чгк</span></a>
+                <a href="https://docs.google.com/spreadsheets/d/10nylhhos-wPkNv8pPH1rgjb3p4lmPP6uYFXd44iCBxg/edit?usp=sharing">результаты <span class="caps">чгк <i class="fa fa-external-link-square"></i></span></a>
 
                 {% if page.active == "si" %}
                     <li class="active">
                 {% else %}
                     <li>
                 {% endif %}
-                <a href="https://goo.gl/SpEm35">результаты <span class="caps">си <i class="fa fa-external-link-square"></i></span></a>
+                <a href="https://docs.google.com/spreadsheets/d/1CrAYqJSXjBoonqSS78vr_VJ-dTGpdW2j2pc2NTcHNqo/edit?usp=sharing">результаты <span class="caps">мш <i class="fa fa-external-link-square"></i></span></a>
 
                 {% if page.active == "eq" %}
                     <li class="active">
                 {% else %}
                     <li>
                 {% endif %}
-                <a href="https://goo.gl/SpEm35">результаты <span class="caps">эк <i class="fa fa-external-link-square"></i></span></a>
+                <a href="https://docs.google.com/spreadsheets/d/144vUduOUUWtGTXwD5jSWWhIGqqvMmvXhZqVVSNLhJHw/edit?usp=sharing">результаты <span class="caps">эк <i class="fa fa-external-link-square"></i></span></a>
 
                 {% if page.active == "br" %}
                     <li class="active">
                 {% else %}
                 <li>
                 {% endif %}
-               <a href="http://volha.challonge.com/17" target="_blank">брейн-ринг <i class="fa fa-external-link-square"></i></span></a>
+               <a href="#">брейн-ринг <i class="fa fa-external-link-square"></i></span></a>
             
             {% if page.active == "regulations" %} 
                 <li class="active">
@@ -84,17 +78,17 @@
             {% endif %}       
             <a href="regulations.html">регламент</a>
             
-        <!--&lt;!&ndash;     {% if page.active == "editors" %} -->
-                <!--<li class="active">-->
-            <!--{% else %}-->
-                <!--<li>-->
-            <!--{% endif %}       -->
-            <!--<a href="../school/editors.html">редакторы</a> &ndash;&gt;-->
+            {% if page.active == "editors" %}
+                <li class="active">
+            {% else %}
+                <li>
+            {% endif %}
+            <a href="../school/editors.html">редакторы</a>
 
 
             <!--<li><a href="https://twitter.com/volhaby">твиттер <i class="fa fa-twitter"></i></a>-->
 
-            <li><a href="https://vk.com/volha17">вконтакте <i class="fa fa-vk"></i></a>
+            <li><a href="https://vk.com/volha_school">вконтакте <i class="fa fa-vk"></i></a>
 
             <li>
             <a href="../students">студенческий</a>

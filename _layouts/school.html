@@ -11,106 +11,110 @@
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://use.typekit.net/gey4twz.js"></script>
     <script>
-    try {
-        Typekit.load();
-    } catch (e) {}
+        try {
+            Typekit.load();
+        } catch (e) {
+        }
     </script>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-3 title z-depth-4">
-                школьный кубок княгини Ольги</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-3 title z-depth-4">
+            школьный кубок княгини Ольги
         </div>
-        <div class="row">
+    </div>
+    <div class="row">
 
-            <ul class="col-md-2 col-md-offset-3 nav nav-pills nav-stacked z-depth-4">
+        <ul class="col-md-2 col-md-offset-3 nav nav-pills nav-stacked z-depth-4">
 
             {% if page.active == "index" %}
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}
-            <a href="index.html">расписание</a>
+            <li class="active">
+                {% else %}
+            <li>
+                {% endif %}
+                <a href="index.html">расписание</a>
 
-                <li>
+            <li>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSePi5ZQShGvt4NbJ5S0dLfldu16BHG7mx-erVIX4iqBaKySDg/viewform">заполнить состав <i class="fa fa-external-link-square"></a>
-                  </li>
 
 
-
-            <!--{% if page.active == "map" %}-->
+                <!--{% if page.active == "map" %}-->
                 <!--<li class="active">-->
-            <!--{% else %}-->
+                <!--{% else %}-->
                 <!--<li>-->
-            <!--{% endif %}-->
+                <!--{% endif %}-->
                 <!--<a href="https://yandex.com/maps/-/C6ETBUIp">карта <i class="fa fa-external-link-square"></i></a>-->
 
                 {% if page.active == "chgk" %}
-                    <li class="active">
+            <li class="active">
                 {% else %}
-                    <li>
+            <li>
                 {% endif %}
-                <a href="https://docs.google.com/spreadsheets/d/10nylhhos-wPkNv8pPH1rgjb3p4lmPP6uYFXd44iCBxg/edit?usp=sharing">результаты <span class="caps">чгк <i class="fa fa-external-link-square"></i></span></a>
+                <a href="https://docs.google.com/spreadsheets/d/10nylhhos-wPkNv8pPH1rgjb3p4lmPP6uYFXd44iCBxg/edit?usp=sharing">результаты <span
+                        class="caps">чгк <i class="fa fa-external-link-square"></i></span></a>
 
                 {% if page.active == "si" %}
-                    <li class="active">
+            <li class="active">
                 {% else %}
-                    <li>
+            <li>
                 {% endif %}
-                <a href="https://docs.google.com/spreadsheets/d/1CrAYqJSXjBoonqSS78vr_VJ-dTGpdW2j2pc2NTcHNqo/edit?usp=sharing">результаты <span class="caps">мш <i class="fa fa-external-link-square"></i></span></a>
+                <a href="https://docs.google.com/spreadsheets/d/1CrAYqJSXjBoonqSS78vr_VJ-dTGpdW2j2pc2NTcHNqo/edit?usp=sharing">результаты <span
+                        class="caps">мш <i class="fa fa-external-link-square"></i></span></a>
 
                 {% if page.active == "eq" %}
-                    <li class="active">
+            <li class="active">
                 {% else %}
-                    <li>
+            <li>
                 {% endif %}
-                <a href="https://docs.google.com/spreadsheets/d/144vUduOUUWtGTXwD5jSWWhIGqqvMmvXhZqVVSNLhJHw/edit?usp=sharing">результаты <span class="caps">эк <i class="fa fa-external-link-square"></i></span></a>
+                <a href="https://docs.google.com/spreadsheets/d/144vUduOUUWtGTXwD5jSWWhIGqqvMmvXhZqVVSNLhJHw/edit?usp=sharing">результаты <span
+                        class="caps">эк <i class="fa fa-external-link-square"></i></span></a>
 
                 {% if page.active == "br" %}
-                    <li class="active">
+            <li class="active">
                 {% else %}
-                <li>
+            <li>
                 {% endif %}
-               <a href="https://docs.google.com/spreadsheets/d/1PiWla82pVJgbpcs1VYCapJU-WakGMx26HKdzgLjmoUU/edit?usp=sharing">брейн-ринг <i class="fa fa-external-link-square"></i></span></a>
-            
-            {% if page.active == "regulations" %} 
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}       
-            <a href="regulations.html">регламент</a>
-            
-            {% if page.active == "editors" %}
-                <li class="active">
-            {% else %}
-                <li>
-            {% endif %}
-            <a href="../school/editors.html">редакторы</a>
+                <a href="https://docs.google.com/spreadsheets/d/1PiWla82pVJgbpcs1VYCapJU-WakGMx26HKdzgLjmoUU/edit?usp=sharing">брейн-ринг <i
+                        class="fa fa-external-link-square"></i></span></a>
+
+                {% if page.active == "regulations" %}
+            <li class="active">
+                {% else %}
+            <li>
+                {% endif %}
+                <a href="regulations.html">регламент</a>
+
+                {% if page.active == "editors" %}
+            <li class="active">
+                {% else %}
+            <li>
+                {% endif %}
+                <a href="../school/editors.html">редакторы</a>
 
 
-            <!--<li><a href="https://twitter.com/volhaby">твиттер <i class="fa fa-twitter"></i></a>-->
+                <!--<li><a href="https://twitter.com/volhaby">твиттер <i class="fa fa-twitter"></i></a>-->
 
             <li><a href="https://vk.com/volha_school">вконтакте <i class="fa fa-vk"></i></a>
 
             <li>
-            <a href="../students">студенческий</a>
+                <a href="../students">студенческий</a>
 
             <li>
-            <a href="..">взрослый</a>
+                <a href="..">взрослый</a>
 
-            </ul>
+        </ul>
 
-            <div class="col-md-6 main z-depth-4">
-
-
-                {{ content }}
+        <div class="col-md-6 main z-depth-4">
 
 
-            </div>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-            <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+            {{ content }}
+
+
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
